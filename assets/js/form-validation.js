@@ -265,15 +265,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const users = getRegisteredUsers();
       let matchedUser = users.find((u) => u.email && u.email.toLowerCase() === trimmedEmail);
 
-      // Support pre-seeded admin and customer demo accounts
-      if (!matchedUser && trimmedEmail === 'admin@borewellpro.com' && enteredPass === 'password123') {
-        matchedUser = {
-          name: 'Admin User',
-          email: 'admin@borewellpro.com',
-          phone: '+91 98765 43210',
-          role: 'admin'
-        };
-      } else if (!matchedUser && trimmedEmail === 'user@borewellpro.com' && enteredPass === 'pass123') {
+      // Support the pre-seeded customer demo account.
+      if (!matchedUser && trimmedEmail === 'user@borewellpro.com' && enteredPass === 'pass123') {
         matchedUser = {
           name: 'Ramesh Kumar',
           email: 'user@borewellpro.com',
@@ -282,22 +275,16 @@ document.addEventListener('DOMContentLoaded', () => {
         };
       }
 
-      if (matchedUser && (matchedUser.password === enteredPass || (matchedUser.email === 'admin@borewellpro.com' && enteredPass === 'password123') || (matchedUser.email === 'user@borewellpro.com' && enteredPass === 'pass123'))) {
+      if (matchedUser && (matchedUser.password === enteredPass || (matchedUser.email === 'user@borewellpro.com' && enteredPass === 'pass123'))) {
         // Save session state
         const sessionData = {
           name: matchedUser.name || 'User',
           email: matchedUser.email,
           phone: matchedUser.phone || '',
-          role: matchedUser.role || (matchedUser.email === 'admin@borewellpro.com' ? 'admin' : 'customer')
+          role: matchedUser.role || 'customer'
         };
         localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(sessionData));
-
-        // Redirect according to role
-        if (sessionData.role === 'admin') {
-          window.location.href = 'admin-dashboard.html';
-        } else {
-          window.location.href = 'index.html';
-        }
+        window.location.href = 'index.html';
       } else {
         renderAuthAlert('loginAlertPlaceholder', 'Invalid email or password. Please check your credentials.', 'danger');
         setError(pass, 'Incorrect password.');
@@ -337,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         const users = getRegisteredUsers();
         const emailExists = users.some((u) => u.email && u.email.toLowerCase() === trimmedEmail);
-        if (emailExists || trimmedEmail === 'admin@borewellpro.com') {
+        if (emailExists) {
           setError(email, 'An account with this email address already exists. Please sign in.');
           isValid = false;
         } else {

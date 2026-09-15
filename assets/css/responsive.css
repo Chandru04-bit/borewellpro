@@ -195,6 +195,10 @@
   .hero-title {
     font-size: 3.85rem;
   }
+
+  .hero-home-2 h1.display-4 {
+    font-size: 3.85rem;
+  }
 }
 
 /* Mobile Offcanvas Navigation Styling */

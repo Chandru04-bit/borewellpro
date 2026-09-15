@@ -386,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '2': {
       title: 'Certified Groundwater Quality Testing',
       shortTitle: 'Water Testing',
-      image: 'assets/images/services/service-2.jpg',
+      image: 'assets/images/Water_testing_for_safe_drinking_20260916011741.jpeg',
       lead: 'Detailed 16-parameter chemical and microbiological screening ensuring healthy, safe drinking water.',
       heading: 'Certified Groundwater Lab Analysis & Testing',
       description: 'Ensure the safety of your family, livestock, crops, and industrial machinery with our accredited lab testing. We test for pH, Total Dissolved Solids (TDS), total hardness, iron, fluorides, nitrates, chlorides, and coliform bacteria, providing full actionable filtration reports.',
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '3': {
       title: 'Submersible Pump Installation & Setup',
       shortTitle: 'Pump Installation',
-      image: 'assets/images/services/service-3.jpg',
+      image: 'assets/images/Pump_installation_and_equipment_…_2K_20260916013253.jpeg',
       lead: 'Accurate pump sizing, high-grade stainless steel motors, digital control panels, and expert lowering.',
       heading: 'High-Efficiency Submersible Motor & Pump Solutions',
       description: 'Selecting and installing the exact horsepower and stage rating is critical to guarantee peak water discharge and prevent premature motor burnout. We supply and install premium stainless steel pumps, heavy copper cables, digital auto-start panels, and safety suspension cables.',
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '4': {
       title: 'Borewell Cleaning & Desilting Services',
       shortTitle: 'Borewell Cleaning',
-      image: 'assets/images/services/service-4.jpg',
+      image: 'assets/images/services/service-4.jpg?v=2',
       lead: 'Specialized chemical and mechanical desilting to restore original depth and clear clogged aquifer veins.',
       heading: 'Deep Borewell Desilting & Yield Restoration',
       description: 'Over years of pumping, borewells accumulate fine silt, sand deposits, and bio-film encrustation that block water fissures. Our specialized desilting and chemical restoration cleans bottom sediment, re-opens rock veins, and restores peak water capacity.',
@@ -458,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '5': {
       title: 'High-Pressure Air Compressor Flushing',
       shortTitle: 'Borewell Flushing',
-      image: 'assets/images/services/service-5.jpg',
+      image: 'assets/images/Borewell_flushing_with_air_injec…_20260916011754.jpeg',
       lead: 'High-velocity 350 PSI air injection using 1200 CFM screw compressors to blast out mud slurry.',
       heading: 'Industrial Air Compressor Flushing & Rejuvenation',
       description: 'Using high-capacity 1200 CFM screw air compressors operating at 350 PSI, we inject high-velocity compressed air deep into the well column. This vigorous scouring lifts muddy slurry, loose rock granules, and debris up to the surface, unlocking sealed water veins.',
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '6': {
       title: 'Submersible Pump Repair & Rapid Maintenance',
       shortTitle: 'Pump Maintenance',
-      image: 'assets/images/services/service-6.jpg',
+      image: 'assets/images/Pump_installation_and_equipment_…_20260916012030.jpeg',
       lead: 'Rapid 24/7 on-site troubleshooting for jammed pumps, motor winding burnouts, and control panel faults.',
       heading: 'Fast-Response Pump Diagnostics & Maintenance',
       description: 'When your pump fails or gets jammed deep inside the casing, rapid emergency response is crucial. Our mobile service rigs are equipped with heavy lifting cranes, electrical test equipment, replacement control panels, and specialized retrieval tools.',

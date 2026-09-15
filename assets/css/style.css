@@ -771,14 +771,14 @@ img {
 .hero-floating-callout {
   position: absolute;
   bottom: 20px;
-  left: 20px;
-  right: 20px;
+  left: 16px;
+  right: 16px;
   background-color: #131E2E;
   background-image: none;
   backdrop-filter: none;
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius-md);
-  padding: 1.25rem;
+  padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -791,6 +791,10 @@ img {
 
 .hero-floating-callout .text-muted {
   color: #CBD5E1 !important;
+}
+
+.hero-home-2 .hero-floating-callout .brand-icon-box .bi-arrow-down-square-fill {
+  color: #FFFFFF !important;
 }
 
 /* ================= Hero Section (Home 2 - Niche) ================= */
@@ -811,10 +815,23 @@ img {
   color: var(--bp-navy-900) !important;
 }
 
+.hero-home-2 h1.display-4 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.02em !important;
+}
+
 .hero-home-2 p,
 .hero-home-2 .lead,
 .hero-home-2 .text-light {
   color: var(--bp-text-muted) !important;
+}
+
+.hero-home-2 p.hero-lead,
+.hero-home-2 .lead {
+  font-size: 1.12rem;
+  line-height: 1.7 !important;
 }
 
 .hero-home-2 .btn-outline-light {
@@ -956,6 +973,18 @@ section.bg-navy {
   box-shadow: var(--shadow-lg);
 }
 
+.service-area-card .bp-card {
+  margin-inline: -0.25rem;
+  padding: 1rem 2.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .service-area-card .bp-card {
+    margin-inline: 0;
+    padding-inline: 1.5rem;
+  }
+}
+
 .bp-card-icon {
   width: 58px;
   height: 58px;
@@ -1038,6 +1067,10 @@ section.bg-navy {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+.service-card-thumb img.pump-installation-image {
+  object-position: center top;
 }
 
 .service-card:hover .service-card-thumb img {
@@ -1293,6 +1326,85 @@ section.bg-navy {
 
 .process-niche-item:hover .process-item-desc {
   color: #FFFFFF !important;
+}
+
+[data-theme="light"] .process-section-niche .process-item-desc,
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-item-desc {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .process-section-niche .process-section-heading {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .process-section-niche {
+  background: #F8FAFC;
+}
+
+[data-theme="light"] .process-section-niche .process-section-sub {
+  color: #64748B !important;
+}
+
+[data-theme="light"] .process-section-niche .process-item-title,
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-item-title {
+  color: #0F172A !important;
+  text-shadow: none;
+}
+
+[data-theme="light"] .process-section-niche .process-step-badge,
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-step-badge {
+  background: #0B1528 !important;
+  color: #FFFFFF !important;
+  border-color: #0EA5E9 !important;
+}
+
+[data-theme="light"] .process-section-niche .process-circle-glow {
+  width: 116px;
+  height: 116px;
+  background: #F8FAFC;
+  border: 3px solid #0EA5E9;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.16), 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .process-section-niche .process-circle-glow .process-icon,
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-icon {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .process-section-niche .process-step-badge {
+  position: absolute;
+  top: 1.35rem;
+  z-index: 1;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+  color: #0284C7 !important;
+  border: 0 !important;
+  box-shadow: none;
+}
+
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-circle-glow {
+  background: #0284C7;
+  border-color: #0284C7;
+  box-shadow: 0 0 24px rgba(14, 165, 233, 0.35), 0 6px 18px rgba(14, 165, 233, 0.2);
+}
+
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-step-badge {
+  padding: 0 3px;
+  border-radius: 4px;
+  background: #0B1528 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-icon,
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-step-badge {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .process-section-niche .process-niche-item:hover .process-item-title {
+  color: #0284C7 !important;
 }
 
 /* ================= Stats Counter Section (Light Mode) ================= */
@@ -2380,15 +2492,49 @@ section.bg-navy .stat-counter-number {
 .about-stat-card {
   background-color: #131E2E !important;
   background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius-md, 10px) !important;
+  box-shadow: var(--shadow-xl, 0 20px 25px -5px rgba(0, 0, 0, 0.35)) !important;
+  padding: 0.75rem 1.65rem !important;
+  width: min(380px, calc(100% - 2.5rem));
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
+  z-index: 2;
+}
+
+[dir="rtl"] .about-stat-card {
+  right: auto;
+  left: 1.25rem;
+  text-align: right;
 }
 
 .about-stat-card .h3 {
   color: #3B82F6 !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.2 !important;
 }
 
 .about-stat-card .text-muted {
   color: #94A3B8 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 575.98px) {
+  .about-stat-card {
+    width: calc(100% - 1.5rem);
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.65rem 1.25rem !important;
+  }
+  [dir="rtl"] .about-stat-card {
+    right: auto;
+    left: 0.75rem;
+  }
 }
 
 .cta-card:has(> .booking-form-validate) {
