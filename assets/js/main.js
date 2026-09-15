@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const siteMarker = '/borewell-pro/';
     const pathname = window.location.pathname.replace(/\\/g, '/');
     const markerIndex = pathname.toLowerCase().indexOf(siteMarker);
-    const siteRoot = markerIndex >= 0 ? pathname.slice(0, markerIndex + siteMarker.length) : '';
+    const siteRoot = markerIndex >= 0 
+      ? pathname.slice(0, markerIndex + siteMarker.length) 
+      : (window.location.protocol === 'file:' ? '' : '/');
     const componentUrl = `${siteRoot}components/footer.html`;
 
     fetch(componentUrl)
