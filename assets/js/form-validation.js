@@ -265,26 +265,39 @@ document.addEventListener('DOMContentLoaded', () => {
       const users = getRegisteredUsers();
       let matchedUser = users.find((u) => u.email && u.email.toLowerCase() === trimmedEmail);
 
-      // Support pre-seeded admin demo account
+      // Support pre-seeded admin and customer demo accounts
       if (!matchedUser && trimmedEmail === 'admin@borewellpro.com' && enteredPass === 'password123') {
         matchedUser = {
           name: 'Admin User',
           email: 'admin@borewellpro.com',
-          phone: '+91 98765 43210'
+          phone: '+91 98765 43210',
+          role: 'admin'
+        };
+      } else if (!matchedUser && trimmedEmail === 'user@borewellpro.com' && enteredPass === 'pass123') {
+        matchedUser = {
+          name: 'Ramesh Kumar',
+          email: 'user@borewellpro.com',
+          phone: '+91 94432 88765',
+          role: 'customer'
         };
       }
 
-      if (matchedUser && (matchedUser.password === enteredPass || (matchedUser.email === 'admin@borewellpro.com' && enteredPass === 'password123'))) {
+      if (matchedUser && (matchedUser.password === enteredPass || (matchedUser.email === 'admin@borewellpro.com' && enteredPass === 'password123') || (matchedUser.email === 'user@borewellpro.com' && enteredPass === 'pass123'))) {
         // Save session state
         const sessionData = {
           name: matchedUser.name || 'User',
           email: matchedUser.email,
-          phone: matchedUser.phone || ''
+          phone: matchedUser.phone || '',
+          role: matchedUser.role || (matchedUser.email === 'admin@borewellpro.com' ? 'admin' : 'customer')
         };
         localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(sessionData));
 
-        // Redirect to Home
-        window.location.href = 'index.html';
+        // Redirect according to role
+        if (sessionData.role === 'admin') {
+          window.location.href = 'admin-dashboard.html';
+        } else {
+          window.location.href = 'index.html';
+        }
       } else {
         renderAuthAlert('loginAlertPlaceholder', 'Invalid email or password. Please check your credentials.', 'danger');
         setError(pass, 'Incorrect password.');

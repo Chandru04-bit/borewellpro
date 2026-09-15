@@ -1508,3 +1508,26 @@
   background-color: transparent !important;
 }
 
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-water {
+  background-color: #0284C7 !important;
+  border-color: #0284C7 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-water:hover,
+[data-theme="dark"] .btn-primary:active,
+[data-theme="dark"] .btn-water:active {
+  background-color: #0369A1 !important;
+  border-color: #0369A1 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .table-light,
+[data-theme="dark"] .table-light th {
+  background-color: #131E2E !important;
+  color: #F8FAFC !important;
+  border-color: #1E2E44 !important;
+}
+

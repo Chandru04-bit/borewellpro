@@ -703,7 +703,20 @@ document.addEventListener('DOMContentLoaded', () => {
               <li class="px-3 py-2 border-bottom">
                 <div class="fw-bold text-dark text-truncate">${escapeHtml(user.name)}</div>
                 <div class="small text-muted text-truncate">${escapeHtml(user.email || '')}</div>
+                ${user.role === 'admin' ? '<span class="badge bg-danger mt-1">Administrator</span>' : '<span class="badge bg-primary mt-1">Customer Account</span>'}
               </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="${user.role === 'admin' ? prefix + 'admin-dashboard.html' : prefix + 'dashboard.html'}">
+                  <i class="bi bi-speedometer2 text-primary"></i> ${user.role === 'admin' ? 'Admin Dashboard' : 'My Dashboard'}
+                </a>
+              </li>
+              ${user.role === 'admin' ? `
+              <li>
+                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="${prefix}dashboard.html">
+                  <i class="bi bi-person text-secondary"></i> Client View
+                </a>
+              </li>` : ''}
+              <li><hr class="dropdown-divider my-1"></li>
               <li>
                 <a class="dropdown-item text-danger d-flex align-items-center gap-2 py-2 btn-logout-action" href="#">
                   <i class="bi bi-box-arrow-right"></i> Logout
@@ -740,7 +753,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let mobileSignInBtn = mobileDrawer.querySelector('a[href*="login.html"]');
 
       if (user && user.name) {
-        // User IS logged in -> Show user box and Logout
+        // User IS logged in -> Show user box, Dashboard, and Logout
         const mobileUserHtml = `
           <div class="mobile-user-slot mb-3 p-3 bg-alt border rounded-3">
             <div class="d-flex align-items-center gap-2 mb-2">
@@ -750,6 +763,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="small text-muted text-truncate">${escapeHtml(user.email || '')}</div>
               </div>
             </div>
+            <a href="${user.role === 'admin' ? prefix + 'admin-dashboard.html' : prefix + 'dashboard.html'}" class="btn btn-outline-primary btn-sm w-100 mb-2 d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-speedometer2"></i> ${user.role === 'admin' ? 'Admin Dashboard' : 'My Dashboard'}
+            </a>
             <button type="button" class="btn btn-outline-danger btn-sm w-100 d-flex align-items-center justify-content-center gap-2 btn-logout-action">
               <i class="bi bi-box-arrow-right"></i> Logout
             </button>
