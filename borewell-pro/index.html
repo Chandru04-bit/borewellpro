@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BorewellPro | Borewell Drilling & Industrial Water Solutions</title>
+  <meta name="description" content="Professional borewell drilling, groundwater testing, submersible pump installations, and maintenance services backed by 15+ years of engineering excellence.">
+  <meta name="keywords" content="borewell drilling, groundwater solutions, submersible pump, borewell cleaning, water testing, Coimbatore drilling">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+
+  <!-- Core CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ================= MAIN STICKY NAVBAR ================= -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon-box">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <span>Borewell<span class="brand-accent">Pro</span></span>
+        </a>
+
+        <!-- Header Actions: Theme & CTA -->
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
+          <a href="login.html" class="btn btn-water d-none d-sm-inline-flex">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Sign In</span>
+          </a>
+          <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-2"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="collapse navbar-collapse order-lg-2" id="desktopNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item active" href="index.html">Home 1 – General Services</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Borewell Niche</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service-area.html">Service Areas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE MENU DRAWER ================= -->
+  <div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header d-flex justify-content-between align-items-center p-3">
+      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+        <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;">
+          <i class="bi bi-droplet-half"></i>
+        </div>
+        <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
+      <div class="py-2">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileHomeSub" role="button" aria-expanded="true">
+              <span><i class="bi bi-house me-2"></i> Home</span>
+              <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
+            </a>
+            <div class="collapse show" id="mobileHomeSub">
+              <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
+                <li><a class="nav-link py-2 active" href="index.html">Home 1 – General Services</a></li>
+                <li><a class="nav-link py-2" href="index-2.html">Home 2 – Borewell Niche</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileServicesSub" role="button" aria-expanded="false">
+              <span><i class="bi bi-gear-wide-connected me-2"></i> Services</span>
+              <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
+            </a>
+            <div class="collapse" id="mobileServicesSub">
+              <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
+                <li><a class="nav-link py-2" href="services.html">All Services Overview</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="nav-link py-2" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tag me-2"></i> Pricing Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="service-area.html"><i class="bi bi-geo-alt me-2"></i> Service Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-2"></i> Insights & Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="p-3 border-top">
+        <a href="login.html" class="btn btn-water w-100 mb-3">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+        </a>
+        <div class="d-flex align-items-center justify-content-between pt-2">
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <span class="small text-muted">Theme</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="rtl-toggle-btn" title="Toggle RTL"><i class="bi bi-text-right"></i></button>
+            <span class="small text-muted">RTL Mode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= SECTION 1: HERO (LEFT CONTENT + RIGHT IMAGE) ================= -->
+    <section class="hero-home-1">
+      <div class="container position-relative z-2">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="eyebrow-badge">
+              <i class="bi bi-droplet-fill"></i> PROFESSIONAL WATER SOLUTIONS
+            </div>
+            <h1 class="hero-title">
+              Reliable Borewell Drilling. <br>
+              <span class="text-primary">Dependable Water Solutions.</span>
+            </h1>
+            <p class="hero-lead">
+              From geophysical site inspection and borewell drilling to water testing and pump installation, we provide complete groundwater solutions backed by experienced professionals and modern equipment.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="contact.html" class="btn btn-water btn-lg">
+                <i class="bi bi-geo-alt-fill"></i> Book a Site Visit
+              </a>
+              <a href="services.html" class="btn btn-outline-dark btn-lg">
+                <i class="bi bi-tools"></i> Explore Our Services
+              </a>
+            </div>
+
+            <!-- Hero Statistics -->
+            <div class="hero-stats-badge-grid">
+              <div class="hero-stat-box">
+                <h4 data-counter-target="15" data-counter-suffix="+">15+</h4>
+                <p>Years<br>Experience</p>
+              </div>
+              <div class="hero-stat-box">
+                <h4 data-counter-target="2500" data-counter-suffix="+">2,500+</h4>
+                <p>Borewells<br>Completed</p>
+              </div>
+              <div class="hero-stat-box">
+                <h4 data-counter-target="95" data-counter-suffix="%">95%</h4>
+                <p>Success<br>Rate</p>
+              </div>
+              <div class="hero-stat-box">
+                <h4 class="text-warning">24/7</h4>
+                <p>Emergency<br>Support</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Featured Visual Frame -->
+          <div class="col-lg-6">
+            <div class="hero-visual-frame animate-up">
+              <div class="hero-visual-badge-top">
+                <i class="bi bi-patch-check-fill text-primary"></i>
+                <span>100% Water Yield Focus</span>
+              </div>
+              <img src="assets/images/hero/hero-1.jpg" alt="Reliable Borewell Drilling Operations and Rig" loading="eager">
+              <div class="hero-floating-callout">
+                <div class="brand-icon-box bg-primary text-white flex-shrink-0">
+                  <i class="bi bi-compass-fill"></i>
+                </div>
+                <div>
+                  <div class="text-dark fw-bold">Hydrogeological Site Survey</div>
+                  <div class="text-muted small">Scientific aquifer mapping & depth profiling up to 1,500 ft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: WHY CHOOSE US ================= -->
+    <section class="section-py bg-alt">
+      <div class="container">
+        <div class="text-center section-header">
+          <div class="eyebrow-badge earth">
+            <i class="bi bi-shield-check"></i> TRUSTED ENGINEERING
+          </div>
+          <h2 class="section-title">Built on Experience. Driven by Results.</h2>
+          <p class="section-subtitle">
+            Our geological knowledge, modern hydraulic machinery, and customer-first approach ensure reliable groundwater supply for generations.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="bp-card animate-up">
+              <div class="bp-card-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h3 class="h5">Experienced Drilling Team</h3>
+              <p class="text-muted">
+                Skilled professionals with extensive experience across different soil and geological conditions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="bp-card animate-up">
+              <div class="bp-card-icon">
+                <i class="bi bi-gear-wide-connected"></i>
+              </div>
+              <h3 class="h5">Modern Equipment</h3>
+              <p class="text-muted">
+                We use reliable drilling machinery and professional tools for efficient and accurate operations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="bp-card animate-up">
+              <div class="bp-card-icon">
+                <i class="bi bi-binoculars-fill"></i>
+              </div>
+              <h3 class="h5">Site Assessment</h3>
+              <p class="text-muted">
+                Every project begins with proper site evaluation to understand groundwater possibilities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="bp-card animate-up">
+              <div class="bp-card-icon">
+                <i class="bi bi-droplet-half"></i>
+              </div>
+              <h3 class="h5">Complete Water Solutions</h3>
+              <p class="text-muted">
+                From drilling to pumping and testing, get everything from one trusted service provider.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: CORE SERVICES ================= -->
+    <section class="section-py">
+      <div class="container">
+        <div class="text-center section-header">
+          <div class="eyebrow-badge">
+            <i class="bi bi-wrench-adjustable"></i> WHAT WE DO
+          </div>
+          <h2 class="section-title">Complete Borewell & Water Services</h2>
+          <p class="section-subtitle">
+            Engineered groundwater extraction, filtration, and pumping systems tailored for residential layouts, agriculture lands, and manufacturing facilities.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-1.jpg" alt="Borewell Drilling Operation" loading="lazy">
+                <span class="service-card-badge"><i class="bi bi-star-fill text-warning me-1"></i> Core Expertise</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">1. Borewell Drilling</h3>
+                <p class="service-card-desc">
+                  High-pressure hydraulic DTH and rotary rig drilling for 4.5" to 8.5" diameter wells across hard rock and sedimentary formations.
+                </p>
+                <a href="service-details.html?service=1" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-2.jpg" alt="Groundwater Testing Laboratory" loading="lazy">
+                <span class="service-card-badge">Certified Lab</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">2. Water Testing</h3>
+                <p class="service-card-desc">
+                  Detailed chemical and microbiological analysis for pH balance, TDS, hardness, fluoride, and minerals to ensure safe drinking water.
+                </p>
+                <a href="service-details.html?service=2" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-3.jpg" alt="Pump Installation Specialist" loading="lazy">
+                <span class="service-card-badge">Energy Efficient</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">3. Pump Installation</h3>
+                <p class="service-card-desc">
+                  Accurate sizing, supply, and lowering of multi-stage stainless steel submersible pumps, digital control panels, and safety cables.
+                </p>
+                <a href="service-details.html?service=3" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-4.jpg" alt="Borewell Cleaning" loading="lazy">
+                <span class="service-card-badge">Yield Restoration</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">4. Borewell Cleaning</h3>
+                <p class="service-card-desc">
+                  Professional desilting and chemical restoration to clean clogged rock fissures, remove mud deposits, and restore water column depth.
+                </p>
+                <a href="service-details.html?service=4" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-5.jpg" alt="Borewell Air Compressor Flushing" loading="lazy">
+                <span class="service-card-badge">1200 CFM Unit</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">5. Borewell Flushing</h3>
+                <p class="service-card-desc">
+                  High-velocity air injection using 350 PSI heavy compressors to blast away mud slurry and sediments to clear water channels.
+                </p>
+                <a href="service-details.html?service=5" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/services/service-6.jpg" alt="Pump Maintenance Technician" loading="lazy">
+                <span class="service-card-badge">Fast Dispatch</span>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">6. Pump Repair & Maintenance</h3>
+                <p class="service-card-desc">
+                  Rapid on-site troubleshooting for stuck pumps, motor winding burnouts, capacitor failures, cable shorts, and pressure drops.
+                </p>
+                <a href="service-details.html?service=6" class="fw-bold text-primary">Learn More &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="services.html" class="btn btn-water btn-lg">
+            <i class="bi bi-arrow-right-circle me-1"></i> View Detailed Service Catalog
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: OUR PROCESS ================= -->
+    <section class="section-py bg-alt">
+      <div class="container">
+        <div class="text-center section-header">
+          <div class="eyebrow-badge earth">
+            <i class="bi bi-diagram-3-fill"></i> SYSTEMATIC EXECUTION
+          </div>
+          <h2 class="section-title">A Smarter Approach to Borewell Drilling</h2>
+          <p class="section-subtitle">
+            Our 6-stage engineering roadmap eliminates guesswork, minimizes geological risk, and guarantees high water yields.
+          </p>
+        </div>
+
+        <div class="process-timeline row g-4 justify-content-center">
+          <!-- Step 1 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">01</span>
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h4 class="h6 fw-bold">Site Inspection</h4>
+              <p class="small text-muted mb-0">Ground assessment & machine access planning.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">02</span>
+                <i class="bi bi-soundwave"></i>
+              </div>
+              <h4 class="h6 fw-bold">Groundwater Study</h4>
+              <p class="small text-muted mb-0">Geophysical survey to pinpoint water veins.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">03</span>
+                <i class="bi bi-gear"></i>
+              </div>
+              <h4 class="h6 fw-bold">Drilling & Casing</h4>
+              <p class="small text-muted mb-0">High-speed DTH drilling with heavy casing insertion.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">04</span>
+                <i class="bi bi-eyedropper"></i>
+              </div>
+              <h4 class="h6 fw-bold">Water Testing</h4>
+              <p class="small text-muted mb-0">Flow rate measurement and potability tests.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">05</span>
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h4 class="h6 fw-bold">Pump Setup</h4>
+              <p class="small text-muted mb-0">Submersible motor and electrical panel setup.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="process-step-item">
+              <div class="process-step-circle">
+                <span class="step-num">06</span>
+                <i class="bi bi-patch-check"></i>
+              </div>
+              <h4 class="h6 fw-bold">Final Handover</h4>
+              <p class="small text-muted mb-0">Lithology log report & warranty delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: SUCCESS RATE & STATS ================= -->
+    <section class="section-py">
+      <div class="container">
+        <div class="stats-banner">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <div class="eyebrow-badge mb-3">
+                <i class="bi bi-graph-up-arrow text-primary"></i> VERIFIED FIELD METRICS
+              </div>
+              <div class="stat-counter-number" data-counter-target="95" data-counter-suffix="%">95%</div>
+              <h3 class="h3 fw-bold mt-1">Successful Borewell Projects</h3>
+              <p class="text-muted small mt-3 pe-lg-3">
+                Every location presents different geological conditions. Our experienced team combines site evaluation, drilling knowledge, and practical field experience to improve project outcomes.
+              </p>
+              <a href="contact.html" class="btn btn-water mt-2">
+                <i class="bi bi-calendar-check me-1"></i> Book Feasibility Study
+              </a>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <div class="stat-metric-card p-3 rounded-3 text-center">
+                    <div class="stat-counter-number" data-counter-target="2500" data-counter-suffix="+">2,500+</div>
+                    <div class="stat-counter-label">Projects Completed</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-metric-card p-3 rounded-3 text-center">
+                    <div class="stat-counter-number" data-counter-target="15" data-counter-suffix="+">15+</div>
+                    <div class="stat-counter-label">Years of Experience</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-metric-card p-3 rounded-3 text-center">
+                    <div class="stat-counter-number" data-counter-target="50" data-counter-suffix="+">50+</div>
+                    <div class="stat-counter-label">Service Areas Covered</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-metric-card p-3 rounded-3 text-center">
+                    <div class="stat-counter-number" data-counter-target="98" data-counter-suffix="%">98%</div>
+                    <div class="stat-counter-label">Client Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: FEATURED PROJECTS ================= -->
+    <section class="section-py bg-alt">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+          <div>
+            <div class="eyebrow-badge">
+              <i class="bi bi-briefcase-fill"></i> PROVEN TRACK RECORD
+            </div>
+            <h2 class="section-title mb-0">Recent Borewell Projects</h2>
+          </div>
+          <a href="services.html" class="btn btn-water mt-3 mt-md-0">
+            View All Projects &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="project-card" data-project-id="1" data-image="assets/images/projects/project-1.jpg" data-title="Coimbatore Suburb" data-category="Residential Borewell" data-depth="Depth: 480 Ft" data-yield="Yield: 2.5 Inch Continuous" data-link="projects/coimbatore-suburb.html">
+              <a href="projects/coimbatore-suburb.html" class="project-card-img-wrap d-block" title="View Coimbatore Suburb Project Details">
+                <img src="assets/images/projects/project-1.jpg" alt="Residential Borewell Coimbatore" loading="lazy">
+                <div class="project-card-overlay"></div>
+                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
+              <div class="project-card-content">
+                <span class="project-category">Residential Borewell</span>
+                <h3 class="project-title"><a href="projects/coimbatore-suburb.html" class="text-white text-decoration-none">Coimbatore Suburb</a></h3>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Depth: 480 Ft</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <i class="bi bi-water"></i>
+                    <span>Yield: 2.5 Inch Continuous</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="projects/coimbatore-suburb.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
+                  <a href="projects/coimbatore-suburb.html" class="project-arrow-icon text-decoration-none" aria-label="View Coimbatore Suburb Project"><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="project-card" data-project-id="2" data-image="assets/images/projects/project-2.jpg" data-title="Pollachi Coconut Estate" data-category="Agricultural Farm" data-depth="Depth: 850 Ft" data-yield="7.5 HP Solar Pump" data-link="projects/pollachi-coconut-estate.html">
+              <a href="projects/pollachi-coconut-estate.html" class="project-card-img-wrap d-block" title="View Pollachi Coconut Estate Project Details">
+                <img src="assets/images/projects/project-2.jpg" alt="Agricultural Borewell Pollachi" loading="lazy">
+                <div class="project-card-overlay"></div>
+                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
+              <div class="project-card-content">
+                <span class="project-category">Agricultural Farm</span>
+                <h3 class="project-title"><a href="projects/pollachi-coconut-estate.html" class="text-white text-decoration-none">Pollachi Coconut Estate</a></h3>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Depth: 850 Ft</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <i class="bi bi-sun-fill"></i>
+                    <span>7.5 HP Solar Pump</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="projects/pollachi-coconut-estate.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
+                  <a href="projects/pollachi-coconut-estate.html" class="project-arrow-icon text-decoration-none" aria-label="View Pollachi Coconut Estate Project"><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="project-card" data-project-id="3" data-image="assets/images/projects/project-3.jpg" data-title="Tiruppur Textile Park" data-category="Industrial Facility" data-depth="Depth: 1,100 Ft" data-yield="Multi-Stage Dual Pump" data-link="projects/tiruppur-textile-park.html">
+              <a href="projects/tiruppur-textile-park.html" class="project-card-img-wrap d-block" title="View Tiruppur Textile Park Project Details">
+                <img src="assets/images/projects/project-3.jpg" alt="Industrial Water Solution Tiruppur" loading="lazy">
+                <div class="project-card-overlay"></div>
+                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
+              <div class="project-card-content">
+                <span class="project-category">Industrial Facility</span>
+                <h3 class="project-title"><a href="projects/tiruppur-textile-park.html" class="text-white text-decoration-none">Tiruppur Textile Park</a></h3>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Depth: 1,100 Ft</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <i class="bi bi-gear-wide-connected"></i>
+                    <span>Multi-Stage Dual Pump</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="projects/tiruppur-textile-park.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
+                  <a href="projects/tiruppur-textile-park.html" class="project-arrow-icon text-decoration-none" aria-label="View Tiruppur Textile Park Project"><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="project-card" data-project-id="4" data-image="assets/images/projects/project-4.jpg" data-title="Erode Commercial Center" data-category="Commercial Complex" data-depth="Depth: 620 Ft" data-yield="Automated Pressure Sensor" data-link="projects/erode-commercial-center.html">
+              <a href="projects/erode-commercial-center.html" class="project-card-img-wrap d-block" title="View Erode Commercial Center Project Details">
+                <img src="assets/images/projects/project-4.jpg" alt="Commercial Borewell Erode" loading="lazy">
+                <div class="project-card-overlay"></div>
+                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </a>
+              <div class="project-card-content">
+                <span class="project-category">Commercial Complex</span>
+                <h3 class="project-title"><a href="projects/erode-commercial-center.html" class="text-white text-decoration-none">Erode Commercial Center</a></h3>
+                <div class="project-meta">
+                  <div class="project-meta-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Depth: 620 Ft</span>
+                  </div>
+                  <div class="project-meta-item">
+                    <i class="bi bi-cpu-fill"></i>
+                    <span>Automated Pressure Sensor</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="projects/erode-commercial-center.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
+                  <a href="projects/erode-commercial-center.html" class="project-arrow-icon text-decoration-none" aria-label="View Erode Commercial Center Project"><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7: TESTIMONIALS SLIDER ================= -->
+    <section class="section-py">
+      <div class="container">
+        <div class="text-center section-header">
+          <div class="eyebrow-badge earth">
+            <i class="bi bi-star-fill text-warning"></i> CLIENT REVIEWS
+          </div>
+          <h2 class="section-title">Trusted by Homeowners, Farmers & Businesses</h2>
+          <p class="section-subtitle">
+            Read authentic feedback from clients who rely on our groundwater engineering and drilling solutions.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="testimonial-slider-wrapper position-relative overflow-hidden p-2">
+              <div class="testimonial-slider-track d-flex transition-all" style="transition: transform 0.5s ease;">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide flex-shrink-0 w-100 p-2">
+                  <div class="testimonial-card">
+                    <i class="bi bi-quote quote-icon"></i>
+                    <div class="star-rating">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "The team inspected our property, explained the drilling process clearly, and completed the work professionally. We hit water at 420 feet with excellent pressure. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                      <img src="assets/images/testimonials/client-1.jpg" alt="Ramesh K." class="author-avatar" loading="lazy">
+                      <div>
+                        <div class="author-name">Ramesh K.</div>
+                        <div class="author-role">Homeowner, Saravanampatti</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide flex-shrink-0 w-100 p-2">
+                  <div class="testimonial-card">
+                    <i class="bi bi-quote quote-icon"></i>
+                    <div class="star-rating">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "Very professional service from site inspection to pump installation. The team was responsive throughout the project. Their casing advice protected our farm well from collapsing."
+                    </p>
+                    <div class="testimonial-author">
+                      <img src="assets/images/testimonials/client-2.jpg" alt="Arun S." class="author-avatar" loading="lazy">
+                      <div>
+                        <div class="author-name">Arun S.</div>
+                        <div class="author-role">Agricultural Land Owner, Pollachi</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide flex-shrink-0 w-100 p-2">
+                  <div class="testimonial-card">
+                    <i class="bi bi-quote quote-icon"></i>
+                    <div class="star-rating">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "We contracted BorewellPro for our manufacturing unit in Tiruppur. Their rig speed, safety adherence, and water flow test reporting were top-tier engineering standards."
+                    </p>
+                    <div class="testimonial-author">
+                      <img src="assets/images/testimonials/client-3.jpg" alt="Suresh Narayanan" class="author-avatar" loading="lazy">
+                      <div>
+                        <div class="author-name">Suresh Narayanan</div>
+                        <div class="author-role">Operations Director, Apex Fabrics</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider Navigation Controls -->
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                <button type="button" class="btn btn-outline-water btn-sm slider-control-prev" aria-label="Previous Slide">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                <div class="d-flex gap-2">
+                  <span class="slider-dot-indicator active" style="width:12px;height:12px;border-radius:50%;background:var(--bp-blue-600);cursor:pointer;"></span>
+                  <span class="slider-dot-indicator" style="width:12px;height:12px;border-radius:50%;background:#CBD5E1;cursor:pointer;"></span>
+                  <span class="slider-dot-indicator" style="width:12px;height:12px;border-radius:50%;background:#CBD5E1;cursor:pointer;"></span>
+                </div>
+                <button type="button" class="btn btn-outline-water btn-sm slider-control-next" aria-label="Next Slide">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 8: FINAL CTA ================= -->
+    <section class="section-py cta-banner text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="eyebrow-badge mb-3">
+              <i class="bi bi-telephone-inbound-fill"></i> GET STARTED TODAY
+            </div>
+            <h2 class="h1 fw-bold mb-3">Looking for a Reliable Borewell Partner?</h2>
+            <p class="lead text-muted mb-4">
+              Let our team inspect your site and recommend the right water solution for your property. We arrive with calibrated instruments and transparent consultation.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="contact.html" class="btn btn-water btn-lg">
+                <i class="bi bi-calendar2-check"></i> Book Site Visit
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline-water btn-lg">
+                <i class="bi bi-telephone-fill text-warning"></i> Call Now (+91 98765 43210)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div data-footer-component></div>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

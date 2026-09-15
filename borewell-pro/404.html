@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | BorewellPro</title>
+  <meta name="description" content="The requested page went off the drilling map. Return to BorewellPro home or browse our groundwater services.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-alt">
+
+  <!-- Header (Clean) -->
+  <header class="site-header py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-droplet-half"></i></div>
+        <span>Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+        <button type="button" class="rtl-toggle-btn" title="Toggle RTL"><i class="bi bi-text-right"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Hero Content -->
+  <main class="my-auto py-5 text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <!-- Drilling Themed SVG Illustration -->
+          <div class="mb-4">
+            <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+              <!-- Ground Level line -->
+              <line x1="20" y1="120" x2="200" y2="120" stroke="#B08968" stroke-width="4" stroke-linecap="round"/>
+              <rect x="20" y="122" width="180" height="45" fill="#FAEDCD" opacity="0.4" rx="4"/>
+              <!-- Drilling Rig Mast Structure -->
+              <path d="M70 120L110 30L150 120" stroke="#0B131E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="85" y1="85" x2="135" y2="85" stroke="#0B131E" stroke-width="4"/>
+              <line x1="95" y1="60" x2="125" y2="60" stroke="#0B131E" stroke-width="4"/>
+              <!-- Drill Rod going deep -->
+              <rect x="107" y="50" width="6" height="115" fill="#0284C7" rx="3"/>
+              <!-- Drill bit tip with sparkle -->
+              <polygon points="104,165 116,165 110,175" fill="#EAB308"/>
+              <!-- Water droplets spraying -->
+              <circle cx="95" cy="140" r="4" fill="#38BDF8"/>
+              <circle cx="125" cy="145" r="3" fill="#38BDF8"/>
+              <circle cx="130" cy="130" r="5" fill="#0EA5E9"/>
+              <circle cx="90" cy="155" r="3" fill="#0EA5E9"/>
+            </svg>
+          </div>
+
+          <div class="display-1 fw-extrabold text-primary mb-2" style="font-size:clamp(5rem, 12vw, 8rem); line-height: 1; letter-spacing: -0.04em;">
+            404
+          </div>
+          <h1 class="h2 fw-bold text-dark mb-2">Page Not Found</h1>
+          <p class="lead text-muted mb-4">
+            Looks like this page went off the drilling map.
+          </p>
+          <p class="small text-muted mb-4 max-w-md mx-auto" style="max-width: 480px;">
+            The borehole coordinates you requested either do not exist or have been shifted to a new geological survey point.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="index.html" class="btn btn-water btn-lg">
+              <i class="bi bi-house-door-fill me-1"></i> Back Home
+            </a>
+            <a href="services.html" class="btn btn-outline-water btn-lg">
+              <i class="bi bi-tools me-1"></i> View Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-footer-component></div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

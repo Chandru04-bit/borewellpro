@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Areas & Coverage | BorewellPro Engineering</title>
+  <meta name="description" content="Find borewell drilling and pump service coverage in Coimbatore, Tiruppur, Pollachi, Erode, Avinashi, Mettupalayam, Sulur, and Udumalpet.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon-box"><i class="bi bi-droplet-half"></i></div>
+          <span>Borewell<span class="brand-accent">Pro</span></span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
+          <a href="login.html" class="btn btn-water d-none d-sm-inline-flex"><i class="bi bi-box-arrow-in-right"></i> <span>Sign In</span></a>
+          <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer"><i class="bi bi-list fs-2"></i></button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="desktopNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – General</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Niche</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link active" href="service-area.html">Service Areas</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer">
+    <div class="offcanvas-header p-3">
+      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+        <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;"><i class="bi bi-droplet-half"></i></div>
+        <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="nav flex-column py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link active" href="service-area.html">Service Areas</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Breadcrumb Hero -->
+    <section class="page-breadcrumb-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+            <span class="separator"><i class="bi bi-chevron-right"></i></span>
+            <span class="fw-semibold">Service Areas</span>
+          </nav>
+          <h1 class="h1 fw-bold mb-2">Serving Homes, Farms & Businesses Across the Region</h1>
+          <p class="lead mb-0">Our mobile rig units and hydrogeology engineers are dispatched daily across 8 major districts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Service Areas Section -->
+    <section class="section-py">
+      <div class="container">
+        <!-- Live Search Bar -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-7">
+            <div class="input-group input-group-lg shadow-sm">
+              <span class="input-group-text bg-white"><i class="bi bi-search text-primary"></i></span>
+              <input type="text" id="serviceAreaSearch" class="form-control" placeholder="Search by city, town, or pincode (e.g. Pollachi, Erode, 641018)..." aria-label="Search service location">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-2 px-1">
+              <span class="small text-muted" id="areaResultCount">Showing 8 of 8 service locations</span>
+              <span class="small text-success fw-semibold"><i class="bi bi-broadcast me-1"></i> All 8 Rigs Active in Field</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Empty State -->
+        <div id="areaNoResults" class="text-center py-5" style="display: none;">
+          <div class="mx-auto mb-3 text-muted fs-1"><i class="bi bi-geo-alt-slash"></i></div>
+          <h4 class="h5 fw-bold">No Exact Location Match Found</h4>
+          <p class="text-muted small">We also accept custom drilling contracts outside standard zones. Contact our dispatch desk.</p>
+          <a href="contact.html" class="btn btn-outline-water btn-sm">Contact Field Office</a>
+        </div>
+
+        <!-- Service Area Cards Grid -->
+        <div class="row g-4" id="serviceAreasContainer">
+          <!-- 1. Coimbatore -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="coimbatore" data-district="coimbatore" data-pincode="641001">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-success-subtle text-success border border-success border-opacity-25 px-2 py-1">HQ & Central Rig Hub</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Coimbatore</h3>
+              <p class="small text-muted mb-3">Saravanampatti, Gandhipuram, Peelamedu, Thudiyalur, Singanallur</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">350 - 550 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 2 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Coimbatore Rig</a>
+            </div>
+          </div>
+
+          <!-- 2. Tiruppur -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="tiruppur" data-district="tiruppur" data-pincode="641601">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary-subtle text-primary border border-primary border-opacity-25 px-2 py-1">Textile & Industrial Hub</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Tiruppur</h3>
+              <p class="small text-muted mb-3">Palladam Road, Avinashi Bypass, Veerapandi, Kangeyam Road</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">600 - 1,100 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 3 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Tiruppur Rig</a>
+            </div>
+          </div>
+
+          <!-- 3. Pollachi -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="pollachi" data-district="coimbatore" data-pincode="642001">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning border-opacity-25 px-2 py-1">Agricultural Belt</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Pollachi</h3>
+              <p class="small text-muted mb-3">Anaimalai, Kinathukadavu, Meenkarai, Negamam, Vettaikaranpudur</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">500 - 900 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 2 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Pollachi Rig</a>
+            </div>
+          </div>
+
+          <!-- 4. Erode -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="erode" data-district="erode" data-pincode="638001">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary-subtle text-primary border border-primary border-opacity-25 px-2 py-1">Commercial Zone</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Erode</h3>
+              <p class="small text-muted mb-3">Perundurai, Bhavani, Gobichettipalayam, Chithode, Modakkurichi</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">450 - 800 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 3 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Erode Rig</a>
+            </div>
+          </div>
+
+          <!-- 5. Avinashi -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="avinashi" data-district="tiruppur" data-pincode="641654">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-secondary-subtle text-secondary border px-2 py-1">Highway Corridor</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Avinashi</h3>
+              <p class="small text-muted mb-3">Sevur, Thekkalur, Kaniyur, Karuvalur, Palangarai</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">500 - 750 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 2 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Avinashi Rig</a>
+            </div>
+          </div>
+
+          <!-- 6. Mettupalayam -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="mettupalayam" data-district="coimbatore" data-pincode="641301">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-success-subtle text-success border border-success border-opacity-25 px-2 py-1">Foothills & Hard Rock</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Mettupalayam</h3>
+              <p class="small text-muted mb-3">Sirumugai, Karamadai, Bellepalayam, Alankombu, Annur</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">400 - 680 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 2 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book MTP Rig</a>
+            </div>
+          </div>
+
+          <!-- 7. Sulur -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="sulur" data-district="coimbatore" data-pincode="641402">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary-subtle text-primary border border-primary border-opacity-25 px-2 py-1">Aviation & Industrial</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Sulur</h3>
+              <p class="small text-muted mb-3">Irugur, Kalangal, Kangayampalayam, Muthugoundenpudur, Karanampettai</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">480 - 720 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 2 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Sulur Rig</a>
+            </div>
+          </div>
+
+          <!-- 8. Udumalpet -->
+          <div class="col-lg-3 col-md-6 service-area-card" data-area-name="udumalpet" data-district="tiruppur" data-pincode="642126">
+            <div class="bp-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning border-opacity-25 px-2 py-1">Windmill & Agriculture</span>
+                <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1">Udumalpet</h3>
+              <p class="small text-muted mb-3">Madathukulam, Kaniyur, Dhali, Kurichikottai, Gudimangalam</p>
+              <div class="small mb-3">
+                <div class="d-flex justify-content-between text-muted mb-1">
+                  <span>Avg Aquifer Depth:</span>
+                  <strong class="text-dark">650 - 950 Ft</strong>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                  <span>Dispatch Response:</span>
+                  <strong class="text-success">&lt; 3 Hours</strong>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-sm btn-outline-water w-100 mt-auto">Book Udumalpet Rig</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="section-py bg-alt">
+      <div class="container">
+        <div class="text-center section-header">
+          <div class="eyebrow-badge earth"><i class="bi bi-map-fill"></i> REGIONAL REACH</div>
+          <h2 class="section-title">Field Rig Logistics Map</h2>
+          <p class="section-subtitle">Strategically stationed fleets ensure under 3-hour mobilization anywhere in western Tamil Nadu.</p>
+        </div>
+
+        <div class="ratio ratio-21x9 rounded-3 shadow border overflow-hidden">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250646.6814234057!2d76.82714571994628!3d11.013957788487739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="BorewellPro Regional Service Map">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section-py cta-banner text-center">
+      <div class="container">
+        <h2 class="h1 fw-bold mb-3">Is Your Location Outside Our Listed Zones?</h2>
+        <p class="lead text-muted mb-4">We deploy specialized long-range industrial rigs across south India for major infrastructure and agricultural projects.</p>
+        <a href="contact.html" class="btn btn-water btn-lg"><i class="bi bi-telephone-outbound me-2"></i> Discuss Custom Deployment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div data-footer-component></div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

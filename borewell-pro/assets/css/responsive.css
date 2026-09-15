@@ -1,0 +1,282 @@
+/* ===================================================================
+   BOREWELLPRO - RESPONSIVE STYLES
+   Breakpoints: 320px, 375px, 425px, 768px, 1024px, 1440px+
+=================================================================== */
+
+/* Extra Small Devices (Phones: 320px - 425px) */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  .site-header .btn-water {
+    display: none; /* Keep header clean on small mobile, accessible in mobile drawer */
+  }
+
+  .hero-home-1 {
+    padding: 4rem 0 3.5rem;
+    text-align: center;
+  }
+
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats-badge-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .hero-visual-frame img {
+    height: 320px;
+  }
+
+  .hero-floating-callout {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .section-py {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  /* Process Timeline turns into a clean vertical stepper on small screens */
+  .process-timeline::before {
+    display: none !important;
+  }
+
+  .process-step-item {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-left: 0;
+  }
+
+  [dir="rtl"] .process-step-item {
+    text-align: right;
+  }
+
+  .process-step-circle {
+    min-width: 70px;
+    height: 70px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Home 2 Niche Process Grid (Mobile: 2 columns) */
+  .process-niche-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0.85rem;
+  }
+
+  .process-circle-glow {
+    width: 76px;
+    height: 76px;
+  }
+
+  .process-circle-glow .process-icon {
+    font-size: 1.65rem;
+  }
+
+  .process-step-badge {
+    min-width: 32px;
+    height: 24px;
+    padding: 0 6px;
+    font-size: 0.72rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .process-item-title {
+    font-size: 0.95rem;
+    min-height: auto;
+  }
+
+  .process-item-desc {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .ba-column {
+    height: 240px;
+  }
+
+  .stats-banner {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .back-to-top-btn {
+    bottom: 25px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+
+  [dir="rtl"] .back-to-top-btn {
+    right: auto;
+    left: 20px;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .project-card-img-wrap {
+    height: 360px;
+  }
+}
+
+/* Medium Devices (Tablets: 768px - 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-home-1 {
+    padding: 5rem 0 4rem;
+  }
+
+  .hero-visual-frame img {
+    height: 380px;
+  }
+
+  .process-timeline::before {
+    display: none;
+  }
+
+  .process-step-item {
+    margin-bottom: 2rem;
+  }
+
+  /* Home 2 Niche Process Grid (Tablet: 3 columns) */
+  .process-niche-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem 1.25rem;
+  }
+
+  .process-item-title {
+    min-height: auto;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
+/* Large Devices (Desktops: 992px - 1199.98px) */
+@media (min-width: 992px) {
+  /* Ensure offcanvas is hidden on desktop */
+  .offcanvas-mobile-nav {
+    display: none !important;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+}
+
+/* Extra Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  .container, .container-lg, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+
+  .hero-title {
+    font-size: 3.85rem;
+  }
+}
+
+/* Mobile Offcanvas Navigation Styling */
+.offcanvas-mobile-nav {
+  width: min(300px, 85vw) !important;
+  max-width: 100vw !important;
+  background-color: var(--bp-chrome-bg) !important;
+  color: var(--bp-chrome-text) !important;
+  border-right: 1px solid var(--bp-chrome-border) !important;
+}
+
+.offcanvas-mobile-nav .offcanvas-header {
+  background-color: var(--bp-chrome-bg) !important;
+  border-bottom: 1px solid var(--bp-chrome-border) !important;
+}
+
+.offcanvas-mobile-nav .nav-link {
+  padding: 0.85rem 1rem !important;
+  font-size: 1.05rem;
+  color: var(--bp-chrome-link) !important;
+  border-bottom: 1px solid var(--bp-chrome-border);
+  border-radius: 0;
+}
+
+.offcanvas-mobile-nav .nav-link:hover,
+.offcanvas-mobile-nav .nav-link.active {
+  color: var(--bp-chrome-link-hover) !important;
+}
+
+.offcanvas-mobile-nav .dropdown-menu {
+  position: static !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding-left: 1.25rem !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+[dir="rtl"] .offcanvas-mobile-nav .dropdown-menu {
+  padding-left: 0 !important;
+  padding-right: 1.25rem !important;
+}
+
+/* Medium-Large Desktops (992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .process-niche-grid {
+    gap: 0.85rem;
+  }
+
+  .process-circle-glow {
+    width: 80px;
+    height: 80px;
+  }
+
+  .process-circle-glow .process-icon {
+    font-size: 1.75rem;
+  }
+
+  .process-item-title {
+    font-size: 0.95rem;
+    min-height: 2.5rem;
+  }
+
+  .process-item-desc {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+}
+
+/* Ultra-Small Screens (<= 360px) */
+@media (max-width: 360px) {
+  .process-niche-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .process-item-desc {
+    max-width: 260px;
+  }
+}
+

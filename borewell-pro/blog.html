@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groundwater Insights & Borewell Blog | BorewellPro Engineering</title>
+  <meta name="description" content="Technical knowledge, drilling depth factors, submersible pump selection, water quality testing advice, and borewell maintenance guides.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon-box"><i class="bi bi-droplet-half"></i></div>
+          <span>Borewell<span class="brand-accent">Pro</span></span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
+          <a href="login.html" class="btn btn-water d-none d-sm-inline-flex"><i class="bi bi-box-arrow-in-right"></i> <span>Sign In</span></a>
+          <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer"><i class="bi bi-list fs-2"></i></button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="desktopNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – General</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Niche</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="service-area.html">Service Areas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer">
+    <div class="offcanvas-header p-3">
+      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+        <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;"><i class="bi bi-droplet-half"></i></div>
+        <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="nav flex-column py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-area.html">Service Areas</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Breadcrumb Hero -->
+    <section class="page-breadcrumb-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+            <span class="separator"><i class="bi bi-chevron-right"></i></span>
+            <span class="fw-semibold">Blog</span>
+          </nav>
+          <h1 class="h1 fw-bold mb-2">Groundwater Insights & Borewell Knowledge</h1>
+          <p class="lead mb-0">Practical hydrogeology advice, aquifer science, and equipment tutorials from our senior engineers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Blog Section -->
+    <section class="section-py">
+      <div class="container">
+        <!-- Featured Hero Article -->
+        <div class="card border-0 shadow-lg rounded-3 overflow-hidden mb-5 bg-alt">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-7">
+              <img src="assets/images/blog/blog-1.jpg" alt="Featured Article: How to Choose the Right Borewell Location" class="w-100 h-100" style="min-height:350px;object-fit:cover;" loading="lazy">
+            </div>
+            <div class="col-lg-5 p-4 p-md-5">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white py-1 px-2 rounded-pill small">Featured Guide</span>
+                <span class="text-muted small">&bull; 8 min read</span>
+              </div>
+              <h2 class="h3 fw-bold mb-3">
+                <a href="blog-details.html" class="text-dark text-decoration-none">How to Choose the Right Borewell Location on Your Property</a>
+              </h2>
+              <p class="text-muted small mb-4">
+                Discover how electrical resistivity survey meters, geological fault mapping, and distance from surface contaminants protect your water quality and guarantee optimal yield.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="assets/images/team/team-1.jpg" alt="Er. K. Natarajan" class="rounded-circle" style="width:36px;height:36px;object-fit:cover;">
+                  <span class="small fw-semibold text-dark">Er. K. Natarajan</span>
+                </div>
+                <a href="blog-details.html" class="btn btn-sm btn-water">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar & Category Filter Pills -->
+        <div class="row g-3 align-items-center justify-content-between mb-4">
+          <div class="col-lg-5">
+            <div class="input-group">
+              <span class="input-group-text bg-white"><i class="bi bi-search text-primary"></i></span>
+              <input type="text" id="blogSearchInput" class="form-control" placeholder="Search groundwater topics or articles..." aria-label="Search articles">
+            </div>
+          </div>
+          <div class="col-lg-7 text-lg-end">
+            <div class="filter-btn-group justify-content-lg-end mb-0">
+              <button class="filter-pill blog-filter-pill active" data-filter="all">All Topics</button>
+              <button class="filter-pill blog-filter-pill" data-filter="borewell">Borewell</button>
+              <button class="filter-pill blog-filter-pill" data-filter="water testing">Water Testing</button>
+              <button class="filter-pill blog-filter-pill" data-filter="pumps">Pumps</button>
+              <button class="filter-pill blog-filter-pill" data-filter="maintenance">Maintenance</button>
+              <button class="filter-pill blog-filter-pill" data-filter="agriculture">Agriculture</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+          <span class="small text-muted" id="blogResultCount">Displaying 6 articles</span>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="blogNoResults" class="text-center py-5" style="display:none;">
+          <div class="fs-1 text-muted mb-2"><i class="bi bi-journal-x"></i></div>
+          <h4 class="h5 fw-bold">No Matching Articles Found</h4>
+          <p class="text-muted small">Try different search keywords or select "All Topics".</p>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="row g-4" id="blogGrid">
+          <!-- Article 1 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="borewell">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-1.jpg" alt="How to Choose the Right Borewell Location" loading="lazy">
+                <span class="service-card-badge bg-primary">Borewell</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Sep 10, 2026 &bull; 6 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">How to Choose the Right Borewell Location</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  Groundwater resistivity techniques, fault line detection, and setback requirements from septic tanks.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="borewell">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-2.jpg" alt="What Factors Affect Borewell Drilling Depth?" loading="lazy">
+                <span class="service-card-badge bg-primary">Borewell</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Sep 04, 2026 &bull; 5 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">What Factors Affect Borewell Drilling Depth?</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  Why drilling depths vary between 350 and 1,200 feet based on crystalline bedrock strata and aquifer replenishment.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="maintenance">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-3.jpg" alt="Signs Your Borewell Needs Cleaning" loading="lazy">
+                <span class="service-card-badge bg-warning text-dark">Maintenance</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Aug 28, 2026 &bull; 4 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">Signs Your Borewell Needs Cleaning</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  Mud discharge, foul sulfur odors, sudden pressure drops, and pump overheating indicate fissure clogging.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="pumps">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-4.jpg" alt="Submersible Pump vs Openwell Pump" loading="lazy">
+                <span class="service-card-badge bg-info text-white">Pumps</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Aug 20, 2026 &bull; 7 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">Submersible Pump vs Openwell Pump</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  A technical comparison on total dynamic head, horsepower efficiency, suction depth limits, and electrical costs.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="maintenance">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-5.jpg" alt="How Often Should a Borewell Be Maintained?" loading="lazy">
+                <span class="service-card-badge bg-warning text-dark">Maintenance</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Aug 12, 2026 &bull; 5 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">How Often Should a Borewell Be Maintained?</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  Recommended preventive flushing schedules, capacitor checkups, and water level monitoring intervals.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="col-lg-4 col-md-6 blog-article-item" data-category="water testing">
+            <div class="service-card animate-up">
+              <div class="service-card-thumb">
+                <img src="assets/images/blog/blog-6.jpg" alt="Understanding Borewell Water Quality" loading="lazy">
+                <span class="service-card-badge bg-success">Water Testing</span>
+              </div>
+              <div class="service-card-body">
+                <div class="small text-muted mb-2"><i class="bi bi-calendar3 me-1"></i> Aug 05, 2026 &bull; 6 min</div>
+                <h3 class="service-card-title h5">
+                  <a href="blog-details.html" class="blog-title text-dark">Understanding Borewell Water Quality</a>
+                </h3>
+                <p class="service-card-desc blog-excerpt">
+                  Interpreting TDS, hardness, nitrates, fluorides, and choosing the right filtration or softening media.
+                </p>
+                <a href="blog-details.html" class="fw-bold text-primary">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div data-footer-component></div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

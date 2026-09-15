@@ -1,0 +1,94 @@
+
+
+<!-- ================= MAIN STICKY NAVBAR ================= -->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-droplet-half"></i>
+        </div>
+        <span>Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+
+      <!-- Header Controls: Mobile Drawer Toggle & Quick Actions -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Dark Mode Switch -->
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
+
+        <!-- Primary CTA Button (Desktop) -->
+        <a href="login.html" class="btn btn-water d-none d-sm-inline-flex">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Sign In</span>
+          </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-dark"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="collapse navbar-collapse order-lg-2" id="desktopNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1 – General Services</a></li>
+              <li><a class="dropdown-item" href="index-2.html">Home 2 – Borewell Niche</a></li>
+            </ul>
+          </li>
+
+          <!-- About -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+          </li>
+
+          <!-- Pricing -->
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+
+          <!-- Service Areas -->
+          <li class="nav-item">
+            <a class="nav-link" href="service-area.html">Service Areas</a>
+          </li>
+
+          <!-- Blog -->
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

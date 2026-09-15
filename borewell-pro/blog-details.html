@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Choose the Right Borewell Location | BorewellPro Blog</title>
+  <meta name="description" content="A comprehensive hydrogeology guide on selecting optimal borewell drilling coordinates, electrical resistivity scanning, and avoiding dry wells.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-icon-box"><i class="bi bi-droplet-half"></i></div>
+          <span>Borewell<span class="brand-accent">Pro</span></span>
+        </a>
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
+          <a href="login.html" class="btn btn-water d-none d-sm-inline-flex"><i class="bi bi-box-arrow-in-right"></i> <span>Sign In</span></a>
+          <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer"><i class="bi bi-list fs-2"></i></button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-2" id="desktopNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1 – General</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2 – Niche</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services Overview</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="service-details.html?service=1">Borewell Drilling</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=2">Water Testing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=3">Pump Installation</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=4">Borewell Cleaning</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=5">Borewell Flushing</a></li>
+                <li><a class="dropdown-item" href="service-details.html?service=6">Pump Maintenance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="service-area.html">Service Areas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer">
+    <div class="offcanvas-header p-3">
+      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+        <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;"><i class="bi bi-droplet-half"></i></div>
+        <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="nav flex-column py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="service-area.html">Service Areas</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Breadcrumb Hero -->
+    <section class="page-breadcrumb-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-10">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+              <a href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+              <span class="separator"><i class="bi bi-chevron-right"></i></span>
+              <a href="blog.html">Blog</a>
+              <span class="separator"><i class="bi bi-chevron-right"></i></span>
+              <span class="fw-semibold">Article Details</span>
+            </nav>
+            <div class="d-flex align-items-center gap-2 my-2">
+              <span class="badge bg-primary text-white py-1 px-3 rounded-pill">Borewell Drilling</span>
+              <span class="text-muted small">&bull; Sep 10, 2026 &bull; 8 min read</span>
+            </div>
+            <h1 class="h2 fw-bold mb-2">How to Choose the Right Borewell Location on Your Property</h1>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <img src="assets/images/team/team-1.jpg" alt="Er. K. Natarajan" class="rounded-circle border border-2 border-primary" style="width:42px;height:42px;object-fit:cover;">
+              <div>
+                <div class="fw-bold text-dark small">Er. K. Natarajan</div>
+                <div class="small text-muted">Senior Hydrogeological Consultant</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content & Sidebar -->
+    <section class="section-py">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Article Content -->
+          <article class="col-lg-8">
+            <img src="assets/images/blog/blog-1.jpg" alt="Hydrogeologist testing soil resistivity" class="rounded-3 w-100 mb-4 shadow" style="max-height:420px;object-fit:cover;" loading="lazy">
+
+            <!-- Table of Contents -->
+            <div class="p-4 bg-alt rounded-3 border mb-4">
+              <h3 class="h5 fw-bold mb-3"><i class="bi bi-list-nested me-2 text-primary"></i> Table of Contents</h3>
+              <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+                <li><a href="#section-intro" class="text-decoration-none text-dark">&rarr; 1. The Real Cost of Guesswork in Borewell Drilling</a></li>
+                <li><a href="#section-geophysical" class="text-decoration-none text-dark">&rarr; 2. Why Geophysical Resistivity Surveys Matter</a></li>
+                <li><a href="#section-setback" class="text-decoration-none text-dark">&rarr; 3. Mandatory Setbacks and Contamination Barriers</a></li>
+                <li><a href="#section-rig-access" class="text-decoration-none text-dark">&rarr; 4. Vehicle Access and Overhead Safety Clearances</a></li>
+                <li><a href="#section-checklist" class="text-decoration-none text-dark">&rarr; 5. Pre-Drilling Checklist for Property Owners</a></li>
+              </ul>
+            </div>
+
+            <!-- Article Body -->
+            <div class="article-content" style="font-size:1.05rem;line-height:1.8;">
+              <h2 class="h4 fw-bold text-dark mt-4 mb-3" id="section-intro">1. The Real Cost of Guesswork in Borewell Drilling</h2>
+              <p class="text-muted">
+                Drilling a borewell is a major capital investment. In hard-rock crystalline terrains like southern India, subterranean water doesn't flow like an underground river; rather, it is trapped within hairline fractures, weathered shear zones, and lithological contact points within granite and gneiss formations.
+              </p>
+              <p class="text-muted">
+                Relying on untrained water-diviners or random guesswork frequently results in "dry holes" that cost thousands of rupees without yielding a single drop of usable water. Modern scientific hydrogeology provides an accurate, verifiable roadmap before heavy drilling rigs touch your property.
+              </p>
+
+              <div class="p-4 my-4 border-start border-primary border-4 bg-alt rounded-2">
+                <p class="fst-italic mb-0 text-dark fw-semibold">
+                  "A scientific electrical resistivity survey maps aquifer depth, fissure width, and expected yield in liters per hour with over 90% certainty."
+                </p>
+              </div>
+
+              <h2 class="h4 fw-bold text-dark mt-4 mb-3" id="section-geophysical">2. Why Geophysical Resistivity Surveys Matter</h2>
+              <p class="text-muted">
+                Electrical resistivity profiling passes a controlled electric current into the earth via steel electrode stakes placed at calibrated geometric intervals (typically Wenner or Schlumberger configurations).
+              </p>
+              <p class="text-muted">
+                Because water-bearing fractured rocks conduct electricity far better than solid, unweathered dry granite, resistivity meters pinpoint exactly where fractures exist beneath the surface and at what depth.
+              </p>
+
+              <h2 class="h4 fw-bold text-dark mt-4 mb-3" id="section-setback">3. Mandatory Setbacks and Contamination Barriers</h2>
+              <p class="text-muted">
+                When siting a borewell, legal setbacks and biological safety zones are non-negotiable:
+              </p>
+              <ul class="text-muted">
+                <li><strong>Septic Tanks & Soak Pits:</strong> Maintain a minimum radius of 50 feet (15 meters) to prevent coliform and nitrogen contamination.</li>
+                <li><strong>Property Boundaries:</strong> Maintain at least 5 to 10 feet from neighboring boundary walls to avoid disputes and structural vibrations.</li>
+                <li><strong>Drainage Channels:</strong> Avoid low-lying hollows where monsoon surface runoff pools, as surface water can infiltrate uncased collars.</li>
+              </ul>
+
+              <h2 class="h4 fw-bold text-dark mt-4 mb-3" id="section-rig-access">4. Vehicle Access and Overhead Safety Clearances</h2>
+              <p class="text-muted">
+                A high-pressure truck-mounted drilling rig weighs in excess of 18 tons and requires a vertical mast elevation clearance of 25 to 35 feet. Always inspect overhead electrical cables and narrow approach roads before confirming your borehole drilling location.
+              </p>
+            </div>
+
+            <!-- Social Sharing & Tags -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-bottom">
+              <div class="d-flex align-items-center gap-2">
+                <span class="small fw-bold text-muted">Tags:</span>
+                <span class="badge bg-light text-dark border">Groundwater</span>
+                <span class="badge bg-light text-dark border">Hydrogeology</span>
+                <span class="badge bg-light text-dark border">Site Survey</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
+                <span class="small fw-bold text-muted">Share:</span>
+                <a href="https://www.facebook.com" class="social-icon-btn bg-alt text-dark" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.x.com" class="social-icon-btn bg-alt text-dark" target="_blank" rel="noopener noreferrer" aria-label="Share on X"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.linkedin.com" class="social-icon-btn bg-alt text-dark" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+
+            <!-- Author Bio Box -->
+            <div class="p-4 bg-alt rounded-3 border d-flex flex-column flex-sm-row gap-3 align-items-center mb-5">
+              <img src="assets/images/team/team-1.jpg" alt="Er. K. Natarajan" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+              <div>
+                <h4 class="h6 fw-bold mb-1">About Er. K. Natarajan</h4>
+                <p class="small text-muted mb-0">
+                  Senior Hydrogeological Consultant with 20+ years of aquifer exploration and borewell drilling management across Tamil Nadu and southern India.
+                </p>
+              </div>
+            </div>
+
+            <!-- Comments Discussion Section -->
+            <div class="mb-5">
+              <h3 class="h5 fw-bold mb-4"><i class="bi bi-chat-left-text me-2 text-primary"></i> Comments (2)</h3>
+              <!-- Comment 1 -->
+              <div class="p-3 bg-alt rounded-3 border mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold small text-dark">V. Senthilkumar</span>
+                  <span class="text-muted small">Aug 14, 2026</span>
+                </div>
+                <p class="small text-muted mb-0">
+                  Great article on resistivity tests. We used BorewellPro's hydrogeology survey last month in Pollachi and hit water at 520 ft exactly where the resistivity meter predicted!
+                </p>
+              </div>
+              <!-- Comment 2 -->
+              <div class="p-3 bg-alt rounded-3 border mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold small text-dark">Raghavan G.</span>
+                  <span class="text-muted small">Aug 18, 2026</span>
+                </div>
+                <p class="small text-muted mb-0">
+                  How much does a resistivity survey cost for a 1-acre residential layout?
+                </p>
+              </div>
+
+              <!-- Comment Form -->
+              <div class="p-4 bg-white border rounded-3 shadow-sm">
+                <h4 class="h6 fw-bold mb-3">Leave a Reply</h4>
+                <form onsubmit="event.preventDefault(); alert('Comment submitted for moderation!'); this.reset();">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control form-control-sm" placeholder="Your Name *" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="email" class="form-control form-control-sm" placeholder="Your Email *" required>
+                    </div>
+                    <div class="col-12">
+                      <textarea class="form-control form-control-sm" rows="3" placeholder="Your Comment *" required></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-water btn-sm">Post Comment</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="col-lg-4">
+            <!-- Search Box -->
+            <div class="p-4 bg-alt rounded-3 border mb-4">
+              <h4 class="h6 fw-bold mb-3">Search Insights</h4>
+              <div class="input-group">
+                <input type="text" class="form-control form-control-sm" placeholder="Search articles...">
+                <button class="btn btn-water btn-sm" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="p-4 bg-alt rounded-3 border mb-4">
+              <h4 class="h6 fw-bold mb-3">Categories</h4>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                <li class="d-flex justify-content-between"><a href="blog.html" class="text-dark">Borewell Drilling</a> <span class="text-muted">(12)</span></li>
+                <li class="d-flex justify-content-between"><a href="blog.html" class="text-dark">Water Quality Testing</a> <span class="text-muted">(8)</span></li>
+                <li class="d-flex justify-content-between"><a href="blog.html" class="text-dark">Submersible Pumps</a> <span class="text-muted">(15)</span></li>
+                <li class="d-flex justify-content-between"><a href="blog.html" class="text-dark">Compressor Maintenance</a> <span class="text-muted">(6)</span></li>
+                <li class="d-flex justify-content-between"><a href="blog.html" class="text-dark">Agricultural Irrigation</a> <span class="text-muted">(9)</span></li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="p-4 bg-alt rounded-3 border mb-4">
+              <h4 class="h6 fw-bold mb-3">Recent Articles</h4>
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex gap-3 align-items-center">
+                  <img src="assets/images/blog/blog-2.jpg" alt="Recent 1" class="rounded" style="width:60px;height:60px;object-fit:cover;">
+                  <div>
+                    <h5 class="small fw-bold mb-1"><a href="blog-details.html" class="text-dark">What Factors Affect Borewell Depth?</a></h5>
+                    <span class="text-muted" style="font-size:0.75rem;">Sep 04, 2026</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                  <img src="assets/images/blog/blog-3.jpg" alt="Recent 2" class="rounded" style="width:60px;height:60px;object-fit:cover;">
+                  <div>
+                    <h5 class="small fw-bold mb-1"><a href="blog-details.html" class="text-dark">Signs Your Borewell Needs Cleaning</a></h5>
+                    <span class="text-muted" style="font-size:0.75rem;">Aug 28, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact CTA Box -->
+            <div class="p-4 cta-card rounded-3 shadow text-center">
+              <h4 class="h5 fw-bold mb-2">Need a Site Assessment?</h4>
+              <p class="small text-muted mb-3">Our hydrogeologists visit your plot to evaluate water depth and coordinates.</p>
+              <a href="contact.html" class="btn btn-water btn-sm w-100"><i class="bi bi-calendar-check me-1"></i> Book Feasibility Survey</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div data-footer-component></div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
