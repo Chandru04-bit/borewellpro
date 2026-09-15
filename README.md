@@ -108,7 +108,7 @@ borewell-pro/
 ## 🚀 Quick Start Guide
 
 1. **Unzip or Clone the Template**:
-   Open the `borewell-pro` folder on your local computer.
+  Open the project root folder on your local computer.
 2. **Open in Any Browser**:
    Double click on `index.html` (or `index-2.html`). No Node.js, Webpack, or local server is required to view the pages.
 3. **Optional Local Server**:
@@ -116,7 +116,7 @@ borewell-pro/
    ```bash
    python -m http.server 8000
    ```
-   Then navigate to `http://localhost:8000/borewell-pro/index.html`.
+  Then navigate to `http://localhost:8000/` or `http://localhost:8000/index.html`.
 
 ---
 
