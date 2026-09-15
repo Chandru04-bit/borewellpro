@@ -121,7 +121,7 @@
         <div class="row g-5">
           <!-- Article Content -->
           <article class="col-lg-8">
-            <img src="assets/images/blog/blog-1.jpg" alt="Hydrogeologist testing soil resistivity" class="rounded-3 w-100 mb-4 shadow" style="max-height:420px;object-fit:cover;" loading="lazy">
+            <img id="articleHeroImage" src="assets/images/blog/blog-1.jpg" alt="Hydrogeologist testing soil resistivity" class="rounded-3 w-100 mb-4 shadow" style="max-height:420px;object-fit:cover;" loading="lazy">
 
             <!-- Table of Contents -->
             <div class="p-4 bg-alt rounded-3 border mb-4">
@@ -376,5 +376,18 @@
   <script src="assets/js/dark-mode.js"></script>
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    const articleImages = {
+      'blog-1': 'assets/images/blog/blog-1.jpg',
+      'blog-2': 'assets/images/blog/blog-2.jpg',
+      'blog-3': 'assets/images/blog/blog-3.jpg',
+      'blog-4': 'assets/images/blog/blog-4.jpg',
+      'blog-5': 'assets/images/blog/blog-5.jpg',
+      'blog-6': 'assets/images/blog/blog-6.jpg'
+    };
+    const requestedArticle = new URLSearchParams(window.location.search).get('article');
+    const articleImage = articleImages[requestedArticle] || articleImages['blog-1'];
+    document.getElementById('articleHeroImage').src = articleImage;
+  </script>
 </body>
 </html>
