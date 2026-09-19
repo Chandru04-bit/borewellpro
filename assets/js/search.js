@@ -8,40 +8,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Service Area Search Filter
   const areaSearchInput = document.getElementById('serviceAreaSearch');
+  const areaSearchBtn = document.getElementById('serviceAreaSearchBtn');
   const areaCards = document.querySelectorAll('.service-area-card');
   const areaNoResults = document.getElementById('areaNoResults');
   const areaCounter = document.getElementById('areaResultCount');
 
-  if (areaSearchInput && areaCards.length > 0) {
-    areaSearchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase().trim();
-      let matchCount = 0;
+  function applyAreaFilter() {
+    if (!areaCards.length) return;
+    const query = areaSearchInput ? areaSearchInput.value.trim().toLowerCase() : '';
+    let matchCount = 0;
 
-      areaCards.forEach((card) => {
-        const areaName = card.getAttribute('data-area-name') || card.textContent.toLowerCase();
-        const areaDistrict = card.getAttribute('data-district') || '';
-        const areaPincode = card.getAttribute('data-pincode') || '';
+    areaCards.forEach((card) => {
+      const areaName = (card.getAttribute('data-area-name') || '').toLowerCase();
+      const areaTitle = (card.querySelector('h3') ? card.querySelector('h3').textContent : '').toLowerCase();
+      const areaPincode = (card.getAttribute('data-pincode') || '').toLowerCase();
+      const areaLocalities = (card.querySelector('p') ? card.querySelector('p').textContent : '').toLowerCase();
+      const areaBadge = (card.querySelector('.badge') ? card.querySelector('.badge').textContent : '').toLowerCase();
 
-        if (
-          areaName.includes(query) ||
-          areaDistrict.toLowerCase().includes(query) ||
-          areaPincode.includes(query)
-        ) {
-          card.style.display = '';
-          matchCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      const matches = query === '' ||
+        areaName.includes(query) ||
+        areaTitle.includes(query) ||
+        areaPincode.includes(query) ||
+        areaLocalities.includes(query) ||
+        areaBadge.includes(query);
 
-      if (areaCounter) {
-        areaCounter.textContent = `Showing ${matchCount} of ${areaCards.length} service locations`;
-      }
-
-      if (areaNoResults) {
-        areaNoResults.style.display = matchCount === 0 ? 'block' : 'none';
+      if (matches) {
+        card.style.display = '';
+        matchCount++;
+      } else {
+        card.style.display = 'none';
       }
     });
+
+    if (areaCounter) {
+      areaCounter.textContent = `Showing ${matchCount} of ${areaCards.length} service locations`;
+    }
+
+    if (areaNoResults) {
+      areaNoResults.style.display = matchCount === 0 ? 'block' : 'none';
+    }
+  }
+
+  if (areaSearchInput && areaCards.length > 0) {
+    areaSearchInput.addEventListener('input', applyAreaFilter);
+    areaSearchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        applyAreaFilter();
+      }
+    });
+  }
+
+  if (areaSearchBtn) {
+    areaSearchBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      applyAreaFilter();
+    });
+  }
+
+  if (areaSearchInput) {
+    const areaSearchGroup = areaSearchInput.closest('.input-group');
+    if (areaSearchGroup) {
+      const searchIcons = areaSearchGroup.querySelectorAll('.input-group-text');
+      searchIcons.forEach((icon) => {
+        icon.addEventListener('click', function (e) {
+          e.preventDefault();
+          applyAreaFilter();
+        });
+      });
+    }
   }
 
   // 2. Blog Search & Category Tag Filter

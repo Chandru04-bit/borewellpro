@@ -27,6 +27,122 @@ document.addEventListener('DOMContentLoaded', () => {
     if (feedback) feedback.textContent = '';
   }
 
+  // Helper: Name Validation (Letters, single spaces, hyphens, and apostrophes only, min 2 chars)
+  const NAME_REGEX = /^[A-Za-z]+(?:[' -][A-Za-z]+)*$/;
+
+  function validateNameField(input) {
+    if (!input) return true;
+    const rawVal = input.value;
+    const trimmedVal = rawVal.trim().replace(/\s+/g, ' ');
+
+    if (!trimmedVal || trimmedVal.length < 2) {
+      setError(input, 'Please enter your full name (minimum 2 characters).');
+      return false;
+    }
+
+    if (!NAME_REGEX.test(trimmedVal)) {
+      setError(input, 'Please enter a valid name using letters, spaces, hyphens, or apostrophes only.');
+      return false;
+    }
+
+    setValid(input);
+    return true;
+  }
+
+  // Helper: Email Validation (Complete address validation with lowercase domain required)
+  const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$/;
+
+  function validateEmailField(input, isRequired = false, customErrorMsg = 'Please enter a valid email address.') {
+    if (!input) return true;
+    const val = input.value.trim();
+
+    if (!val) {
+      if (isRequired) {
+        setError(input, customErrorMsg);
+        return false;
+      }
+      return true;
+    }
+
+    if (!EMAIL_REGEX.test(val)) {
+      setError(input, customErrorMsg);
+      return false;
+    }
+
+    setValid(input);
+    return true;
+  }
+
+  // Attach Name Input Filter (prevent numbers and invalid characters during typing & pasting)
+  function attachNameInputRestrictions() {
+    const nameSelector = 'input[name="fullName"], #regFullName, input[name="name"], input[placeholder*="Name"], input[placeholder*="Owner"], input[placeholder*="Developer"]';
+    document.querySelectorAll(nameSelector).forEach((input) => {
+      if (input.dataset.nameFilterBound) return;
+      input.dataset.nameFilterBound = 'true';
+
+      // 1. Prevent invalid key typing (numbers, special symbols)
+      input.addEventListener('keydown', (e) => {
+        if (e.ctrlKey || e.metaKey || e.altKey || e.key.length > 1) {
+          return;
+        }
+        if (!/^[a-zA-Z\s'-]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+
+      // 2. Filter invalid characters during paste
+      input.addEventListener('paste', function (e) {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text') || '';
+        const cleaned = text.replace(/[^a-zA-Z\s'-]/g, '');
+        const start = this.selectionStart !== null ? this.selectionStart : this.value.length;
+        const end = this.selectionEnd !== null ? this.selectionEnd : this.value.length;
+        const currentVal = this.value;
+        this.value = currentVal.substring(0, start) + cleaned + currentVal.substring(end);
+        const newPos = start + cleaned.length;
+        if (this.setSelectionRange) {
+          this.setSelectionRange(newPos, newPos);
+        }
+        this.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+
+      // 3. Sanitize on input (handles drag-and-drop, autofill, IME composition)
+      input.addEventListener('input', function () {
+        const cleaned = this.value.replace(/[^a-zA-Z\s'-]/g, '');
+        if (this.value !== cleaned) {
+          const start = this.selectionStart;
+          this.value = cleaned;
+          if (start !== null && this.setSelectionRange) {
+            const newPos = Math.min(start, cleaned.length);
+            this.setSelectionRange(newPos, newPos);
+          }
+        }
+      });
+    });
+  }
+
+  // Attach Email Input Validation on blur/change
+  function attachEmailInputValidation() {
+    const emailSelector = 'input[type="email"], input[name="email"], #loginEmail, #regEmail';
+    document.querySelectorAll(emailSelector).forEach((input) => {
+      if (input.dataset.emailValBound) return;
+      input.dataset.emailValBound = 'true';
+
+      input.addEventListener('blur', function () {
+        if (this.value.trim()) {
+          validateEmailField(this, this.hasAttribute('required'));
+        }
+      });
+    });
+  }
+
+  attachNameInputRestrictions();
+  attachEmailInputValidation();
+  document.addEventListener('show.bs.modal', () => {
+    attachNameInputRestrictions();
+    attachEmailInputValidation();
+  });
+
   // Clear validation state on input
   document.querySelectorAll('input, select, textarea').forEach((el) => {
     el.addEventListener('input', () => {
@@ -77,11 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Full Name Validation
       if (nameInput) {
-        if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-          setError(nameInput, 'Please enter your full name (minimum 2 characters).');
+        if (!validateNameField(nameInput)) {
           isValid = false;
-        } else {
-          setValid(nameInput);
         }
       }
 
@@ -99,12 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Email Validation (optional or formatted)
       if (emailInput && emailInput.value.trim()) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-          setError(emailInput, 'Please enter a valid email address.');
+        if (!validateEmailField(emailInput, false, 'Please enter a valid email address.')) {
           isValid = false;
-        } else {
-          setValid(emailInput);
         }
       }
 
@@ -242,10 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('loginEmail');
       const pass = document.getElementById('loginPassword');
 
-      const trimmedEmail = email ? email.value.trim().toLowerCase() : '';
+      const rawEmail = email ? email.value.trim() : '';
       const enteredPass = pass ? pass.value : '';
 
-      if (!trimmedEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+      if (!rawEmail || !EMAIL_REGEX.test(rawEmail)) {
         setError(email, 'Please enter a valid registered email address.');
         isValid = false;
       } else {
@@ -261,12 +370,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      // Check against registered users
+      // Check against registered users (case-insensitive lookup with valid formatted email)
+      const lookupEmail = rawEmail.toLowerCase();
       const users = getRegisteredUsers();
-      let matchedUser = users.find((u) => u.email && u.email.toLowerCase() === trimmedEmail);
+      let matchedUser = users.find((u) => u.email && u.email.toLowerCase() === lookupEmail);
 
       // Support the pre-seeded customer demo account.
-      if (!matchedUser && trimmedEmail === 'user@borewellpro.com' && enteredPass === 'pass123') {
+      if (!matchedUser && lookupEmail === 'user@borewellpro.com' && enteredPass === 'pass123') {
         matchedUser = {
           name: 'Ramesh Kumar',
           email: 'user@borewellpro.com',
@@ -305,25 +415,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const confirmPass = document.getElementById('regConfirmPassword');
       const terms = document.getElementById('regTerms');
 
-      const trimmedName = name ? name.value.trim() : '';
-      const trimmedEmail = email ? email.value.trim().toLowerCase() : '';
+      const trimmedName = name ? name.value.trim().replace(/\s+/g, ' ') : '';
+      const rawEmail = email ? email.value.trim() : '';
       const trimmedPhone = phone ? phone.value.trim() : '';
       const enteredPass = pass ? pass.value : '';
       const enteredConfirmPass = confirmPass ? confirmPass.value : '';
 
-      if (!trimmedName || trimmedName.length < 2) {
-        setError(name, 'Please enter your full name (minimum 2 characters).');
-        isValid = false;
-      } else {
-        setValid(name);
+      // Full Name Validation
+      if (name) {
+        if (!validateNameField(name)) {
+          isValid = false;
+        }
       }
 
-      if (!trimmedEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+      if (!rawEmail || !EMAIL_REGEX.test(rawEmail)) {
         setError(email, 'Please enter a valid email address.');
         isValid = false;
       } else {
         const users = getRegisteredUsers();
-        const emailExists = users.some((u) => u.email && u.email.toLowerCase() === trimmedEmail);
+        const emailExists = users.some((u) => u.email && u.email.toLowerCase() === rawEmail.toLowerCase());
         if (emailExists) {
           setError(email, 'An account with this email address already exists. Please sign in.');
           isValid = false;
@@ -365,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const users = getRegisteredUsers();
         users.push({
           name: trimmedName,
-          email: trimmedEmail,
+          email: rawEmail.toLowerCase(),
           phone: trimmedPhone,
           password: enteredPass,
           createdAt: new Date().toISOString()
@@ -374,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Store flash message and prefilled email for login page
         sessionStorage.setItem(AUTH_FLASH_MSG_KEY, 'Account created successfully. Please sign in.');
-        sessionStorage.setItem(AUTH_FLASH_EMAIL_KEY, trimmedEmail);
+        sessionStorage.setItem(AUTH_FLASH_EMAIL_KEY, rawEmail.toLowerCase());
 
         // Redirect user to Sign In page (do NOT directly go to Home)
         window.location.href = 'login.html';
@@ -388,8 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const input = form.querySelector('input[type="email"]');
-      if (!input || !input.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
-        if (input) setError(input, 'Please enter a valid email.');
+      if (!input || !validateEmailField(input, true, 'Please enter a valid email.')) {
         return;
       }
       alert('✓ Thank you for subscribing to BorewellPro Groundwater Insights!');
@@ -397,4 +506,37 @@ document.addEventListener('DOMContentLoaded', () => {
       input.classList.remove('is-valid', 'is-invalid');
     });
   });
+
+  // 5. Blog Comment Form Validation
+  const blogCommentForm = document.getElementById('blogCommentForm');
+  if (blogCommentForm) {
+    blogCommentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nameInput = this.querySelector('[name="fullName"], input[type="text"]');
+      const emailInput = this.querySelector('input[type="email"]');
+      const commentInput = this.querySelector('textarea');
+      let isValid = true;
+
+      if (nameInput && !validateNameField(nameInput)) {
+        isValid = false;
+      }
+
+      if (emailInput && !validateEmailField(emailInput, true, 'Please enter a valid email address.')) {
+        isValid = false;
+      }
+
+      if (commentInput && (!commentInput.value.trim() || commentInput.value.trim().length < 5)) {
+        setError(commentInput, 'Please enter a comment (minimum 5 characters).');
+        isValid = false;
+      } else if (commentInput) {
+        setValid(commentInput);
+      }
+
+      if (isValid) {
+        alert('✓ Comment submitted for moderation! Thank you for your feedback.');
+        this.reset();
+        this.querySelectorAll('.is-valid, .is-invalid').forEach((el) => el.classList.remove('is-valid', 'is-invalid'));
+      }
+    });
+  }
 });

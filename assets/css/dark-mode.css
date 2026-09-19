@@ -268,6 +268,25 @@
   color: var(--bp-blue-400) !important;
 }
 
+[data-theme="dark"] .navbar-toggler {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .navbar-toggler i,
+[data-theme="dark"] .navbar-toggler .bi-list {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .navbar-toggler:hover,
+[data-theme="dark"] .navbar-toggler:focus {
+  color: var(--bp-blue-400) !important;
+}
+
+[data-theme="dark"] .navbar-toggler:hover i,
+[data-theme="dark"] .navbar-toggler:hover .bi-list {
+  color: var(--bp-blue-400) !important;
+}
+
 [data-theme="dark"] .dropdown-menu {
   background-color: #131E2E;
   border: 1px solid var(--bp-border);
