@@ -51,8 +51,7 @@ borewell-pro/
 ├── blog.html               # Groundwater Insights with Live Filter
 ├── blog-details.html       # Technical Article with TOC, Author Bio & Comments
 ├── contact.html            # Contact Cards & Interactive Site Visit Form
-├── login.html              # Authentication Login Screen
-├── register.html           # Account Registration Screen
+├── products.html           # Products & Industrial Equipment Store
 ├── 404.html                # Custom Drilling Themed 404 Error Page
 ├── coming-soon.html        # Maintenance Page with Working Countdown
 │

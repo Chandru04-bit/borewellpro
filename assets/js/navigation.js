@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sticky header on scroll
   function handleScrollHeader() {
     if (!header) return;
-    if (window.scrollY > 40) {
+    if (window.scrollY > 20) {
       header.classList.add('is-scrolled');
     } else {
       header.classList.remove('is-scrolled');
@@ -102,14 +102,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close mobile drawer when clicking internal link
+  // Handle Mobile Collapsible Submenus & Drawer Navigation
   const offcanvasEl = document.getElementById('mobileNavDrawer');
-  if (offcanvasEl && typeof bootstrap !== 'undefined') {
-    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
-    offcanvasEl.querySelectorAll('a:not(.dropdown-toggle)').forEach((link) => {
-      link.addEventListener('click', () => {
-        bsOffcanvas.hide();
+  if (offcanvasEl) {
+    // Expand active sections on page load
+    if (currentPath === 'services.html' || currentPath === 'service-details.html') {
+      const servicesCollapse = document.getElementById('mobileServicesSub');
+      if (servicesCollapse) {
+        servicesCollapse.classList.add('show');
+        const trigger = offcanvasEl.querySelector('[href="#mobileServicesSub"]');
+        if (trigger) {
+          trigger.classList.remove('collapsed');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      }
+    }
+
+    if (currentPath === 'index.html' || currentPath === 'index-2.html') {
+      const homeCollapse = document.getElementById('mobileHomeSub');
+      if (homeCollapse) {
+        homeCollapse.classList.add('show');
+        const trigger = offcanvasEl.querySelector('[href="#mobileHomeSub"]');
+        if (trigger) {
+          trigger.classList.remove('collapsed');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      }
+    }
+
+    // Close mobile drawer only when navigating to a real page link
+    if (typeof bootstrap !== 'undefined') {
+      const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+      offcanvasEl.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', function (e) {
+          const isCollapseToggle = this.hasAttribute('data-bs-toggle') || 
+                                   this.getAttribute('data-bs-toggle') === 'collapse' || 
+                                   this.getAttribute('href')?.startsWith('#');
+          if (isCollapseToggle) {
+            // Do not close drawer, allow collapse to toggle
+            return;
+          }
+          // Real navigation link clicked -> hide offcanvas drawer
+          bsOffcanvas.hide();
+        });
       });
-    });
+    }
   }
 });

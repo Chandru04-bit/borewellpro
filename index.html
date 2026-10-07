@@ -36,11 +36,7 @@
           <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
             <i class="bi bi-moon-stars-fill"></i>
           </button>
-          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode"><i class="bi bi-text-right"></i></button>
-          <a href="login.html" class="btn btn-water d-none d-sm-inline-flex">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span>Sign In</span>
-          </a>
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode">RTL</button>
           <button class="navbar-toggler border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation">
             <i class="bi bi-list fs-2"></i>
           </button>
@@ -90,82 +86,109 @@
     </nav>
   </header>
 
-  <!-- ================= MOBILE MENU DRAWER ================= -->
-  <div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
-    <div class="offcanvas-header d-flex justify-content-between align-items-center p-3">
-      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
-        <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;">
-          <i class="bi bi-droplet-half"></i>
-        </div>
-        <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
-      </a>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
-      <div class="py-2">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileHomeSub" role="button" aria-expanded="true">
-              <span><i class="bi bi-house me-2"></i> Home</span>
-              <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
-            </a>
-            <div class="collapse show" id="mobileHomeSub">
-              <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
-                <li><a class="nav-link py-2 active" href="index.html">Home 1 – General Services</a></li>
-                <li><a class="nav-link py-2" href="index-2.html">Home 2 – Borewell Niche</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
-          <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileServicesSub" role="button" aria-expanded="false">
-              <span><i class="bi bi-gear-wide-connected me-2"></i> Services</span>
-              <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
-            </a>
-            <div class="collapse" id="mobileServicesSub">
-              <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
-                <li><a class="nav-link py-2" href="services.html">All Services Overview</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=1">Borewell Drilling</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=2">Water Testing</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=3">Pump Installation</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=4">Borewell Cleaning</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=5">Borewell Flushing</a></li>
-                <li><a class="nav-link py-2" href="service-details.html?service=6">Pump Maintenance</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html"><i class="bi bi-tag me-2"></i> Pricing Packages</a></li>
-          <li class="nav-item"><a class="nav-link" href="service-area.html"><i class="bi bi-geo-alt me-2"></i> Service Areas</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-2"></i> Insights & Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact Us</a></li>
-        </ul>
+  <!-- ================= MOBILE OFFCANVAS DRAWER ================= -->
+<div class="offcanvas offcanvas-start offcanvas-mobile-nav" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+  <div class="offcanvas-header d-flex justify-content-between align-items-center p-3">
+    <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+      <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;">
+        <i class="bi bi-droplet-half"></i>
       </div>
-      <div class="p-3 border-top">
-        <a href="login.html" class="btn btn-water w-100 mb-3">
-          <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
-        </a>
-        <div class="d-flex align-items-center justify-content-between pt-2">
-          <div class="d-flex align-items-center gap-2">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
-              <i class="bi bi-moon-stars-fill"></i>
-            </button>
-            <span class="small text-muted">Theme</span>
+      <span class="fs-5">Borewell<span class="brand-accent">Pro</span></span>
+    </a>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
+    <div class="py-2">
+      <ul class="nav flex-column">
+        <!-- Home Collapsible -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#mobileHomeSub" role="button" aria-expanded="false" aria-controls="mobileHomeSub">
+            <span><i class="bi bi-house me-2"></i> Home</span>
+            <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
+          </a>
+          <div class="collapse" id="mobileHomeSub">
+            <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
+              <li><a class="nav-link py-2" href="index.html">Home 1 – General Services</a></li>
+              <li><a class="nav-link py-2" href="index-2.html">Home 2 – Borewell Niche</a></li>
+            </ul>
           </div>
-          <div class="d-flex align-items-center gap-2">
-            <button type="button" class="rtl-toggle-btn" title="Toggle RTL"><i class="bi bi-text-right"></i></button>
-            <span class="small text-muted">RTL Mode</span>
+        </li>
+
+        <!-- About -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a>
+        </li>
+
+        <!-- Services Collapsible Dropdown -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse" href="#mobileServicesSub" role="button" aria-expanded="false" aria-controls="mobileServicesSub">
+            <span><i class="bi bi-gear-wide-connected me-2"></i> Services</span>
+            <i class="bi bi-chevron-down" style="font-size: 0.8rem;"></i>
+          </a>
+          <div class="collapse" id="mobileServicesSub">
+            <ul class="list-unstyled ps-4 py-2 bg-alt mb-0">
+              <li><a class="nav-link py-2" href="services.html">All Services Overview</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=1">Borewell Drilling</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=2">Water Testing</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=3">Pump Installation</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=4">Borewell Cleaning</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=5">Borewell Flushing</a></li>
+              <li><a class="nav-link py-2" href="service-details.html?service=6">Pump Maintenance</a></li>
+            </ul>
           </div>
+        </li>
+
+
+
+        <!-- Pricing -->
+        <li class="nav-item">
+          <a class="nav-link" href="pricing.html"><i class="bi bi-tag me-2"></i> Pricing Packages</a>
+        </li>
+
+        <!-- Service Areas -->
+        <li class="nav-item">
+          <a class="nav-link" href="service-area.html"><i class="bi bi-geo-alt me-2"></i> Service Areas</a>
+        </li>
+
+        <!-- Blog -->
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-2"></i> Insights & Blog</a>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile Drawer Footer Actions -->
+    <div class="p-3 border-top">
+      <div class="d-flex align-items-center justify-content-between pt-2">
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <span class="small text-muted">Theme</span>
         </div>
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="rtl-toggle-btn" title="Switch RTL / LTR Layout" aria-label="Toggle RTL Mode">RTL</button>
+          <span class="small text-muted">RTL Mode</span>
+        </div>
+      </div>
+      <div class="mt-3 text-center small text-muted">
+        <i class="bi bi-telephone-fill me-1 text-primary"></i> 24/7 Hotline: +91 98765 43210
       </div>
     </div>
   </div>
+</div>
 
-  <main>
+  <main id="main-content">
     <!-- ================= SECTION 1: HERO (LEFT CONTENT + RIGHT IMAGE) ================= -->
     <section class="hero-home-1">
-      <div class="container position-relative z-2">
+      <div class="container home1-container position-relative z-2">
         <div class="row align-items-center g-5">
-          <div class="col-lg-6">
+          <div class="col-lg-6 hero-content">
             <div class="eyebrow-badge">
               <i class="bi bi-droplet-fill"></i> PROFESSIONAL WATER SOLUTIONS
             </div>
@@ -186,20 +209,20 @@
             </div>
 
             <!-- Hero Statistics -->
-            <div class="hero-stats-badge-grid">
-              <div class="hero-stat-box">
+            <div class="hero-stats-badge-grid stats-grid">
+              <div class="hero-stat-box stat-item">
                 <h4 data-counter-target="15" data-counter-suffix="+">15+</h4>
                 <p>Years<br>Experience</p>
               </div>
-              <div class="hero-stat-box">
+              <div class="hero-stat-box stat-item">
                 <h4 data-counter-target="2500" data-counter-suffix="+">2,500+</h4>
                 <p>Borewells<br>Completed</p>
               </div>
-              <div class="hero-stat-box">
+              <div class="hero-stat-box stat-item">
                 <h4 data-counter-target="95" data-counter-suffix="%">95%</h4>
                 <p>Success<br>Rate</p>
               </div>
-              <div class="hero-stat-box">
+              <div class="hero-stat-box stat-item">
                 <h4 class="text-warning">24/7</h4>
                 <p>Emergency<br>Support</p>
               </div>
@@ -213,7 +236,7 @@
                 <i class="bi bi-patch-check-fill text-primary"></i>
                 <span>100% Water Yield Focus</span>
               </div>
-              <img src="assets/images/hero/hero-1.jpg" alt="Reliable Borewell Drilling Operations and Rig" loading="eager">
+              <img src="assets/images/hero/hero-1.jpg" alt="Reliable Borewell Drilling Operations and Rig" class="hero-image" loading="eager">
               <div class="hero-floating-callout">
                 <div class="brand-icon-box bg-primary text-white flex-shrink-0">
                   <i class="bi bi-compass-fill"></i>
@@ -440,72 +463,84 @@
           <!-- Step 1 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">01</span>
-                <i class="bi bi-geo-alt"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-1-site-inspection.jpg" alt="Site Inspection - Ground assessment and drilling rig access planning" class="process-step-img" loading="lazy">
+                <span class="process-step-number">01</span>
               </div>
-              <h4 class="h6 fw-bold">Site Inspection</h4>
-              <p class="small text-muted mb-0">Ground assessment & machine access planning.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Site Inspection</h4>
+                <p class="small text-muted mb-0">Ground assessment & machine access planning.</p>
+              </div>
             </div>
           </div>
 
           <!-- Step 2 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">02</span>
-                <i class="bi bi-soundwave"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-2-groundwater-study.jpg" alt="Groundwater Study - Geophysical survey to pinpoint water veins" class="process-step-img" loading="lazy">
+                <span class="process-step-number">02</span>
               </div>
-              <h4 class="h6 fw-bold">Groundwater Study</h4>
-              <p class="small text-muted mb-0">Geophysical survey to pinpoint water veins.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Groundwater Study</h4>
+                <p class="small text-muted mb-0">Geophysical survey to pinpoint water veins.</p>
+              </div>
             </div>
           </div>
 
           <!-- Step 3 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">03</span>
-                <i class="bi bi-gear"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-3-drilling-casing.jpg" alt="Drilling & Casing - High-speed DTH drilling with heavy casing insertion" class="process-step-img" loading="lazy">
+                <span class="process-step-number">03</span>
               </div>
-              <h4 class="h6 fw-bold">Drilling & Casing</h4>
-              <p class="small text-muted mb-0">High-speed DTH drilling with heavy casing insertion.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Drilling & Casing</h4>
+                <p class="small text-muted mb-0">High-speed DTH drilling with heavy casing insertion.</p>
+              </div>
             </div>
           </div>
 
           <!-- Step 4 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">04</span>
-                <i class="bi bi-eyedropper"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-4-water-testing.jpg" alt="Water Testing - Flow rate measurement and potability tests" class="process-step-img" loading="lazy">
+                <span class="process-step-number">04</span>
               </div>
-              <h4 class="h6 fw-bold">Water Testing</h4>
-              <p class="small text-muted mb-0">Flow rate measurement and potability tests.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Water Testing</h4>
+                <p class="small text-muted mb-0">Flow rate measurement and potability tests.</p>
+              </div>
             </div>
           </div>
 
           <!-- Step 5 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">05</span>
-                <i class="bi bi-lightning-charge"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-5-pump-setup.jpg" alt="Pump Setup - Submersible motor and electrical panel setup" class="process-step-img" loading="lazy">
+                <span class="process-step-number">05</span>
               </div>
-              <h4 class="h6 fw-bold">Pump Setup</h4>
-              <p class="small text-muted mb-0">Submersible motor and electrical panel setup.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Pump Setup</h4>
+                <p class="small text-muted mb-0">Submersible motor and electrical panel setup.</p>
+              </div>
             </div>
           </div>
 
           <!-- Step 6 -->
           <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="process-step-item">
-              <div class="process-step-circle">
-                <span class="step-num">06</span>
-                <i class="bi bi-patch-check"></i>
+              <div class="process-step-media">
+                <img src="assets/images/process/step-6-final-handover.jpg" alt="Final Handover - Lithology log report and warranty delivery" class="process-step-img" loading="lazy">
+                <span class="process-step-number">06</span>
               </div>
-              <h4 class="h6 fw-bold">Final Handover</h4>
-              <p class="small text-muted mb-0">Lithology log report & warranty delivery.</p>
+              <div class="process-step-body">
+                <h4 class="h6 fw-bold">Final Handover</h4>
+                <p class="small text-muted mb-0">Lithology log report & warranty delivery.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -574,25 +609,22 @@
             </div>
             <h2 class="section-title mb-0">Recent Borewell Projects</h2>
           </div>
-          <a href="projects.html" class="btn btn-water mt-3 mt-md-0">
-            View All Projects &rarr;
+          <a href="contact.html" class="btn btn-water mt-3 mt-md-0">
+            Book Site Survey &rarr;
           </a>
         </div>
 
         <div class="row g-4">
           <!-- Project 1 -->
           <div class="col-lg-3 col-md-6">
-            <div class="project-card" data-project-id="1" data-image="assets/images/projects/project-1.jpg" data-title="Coimbatore Suburb" data-category="Residential Borewell" data-depth="Depth: 480 Ft" data-yield="Yield: 2.5 Inch Continuous" data-link="projects/coimbatore-suburb.html">
-              <a href="projects/coimbatore-suburb.html" class="project-card-img-wrap d-block" title="View Coimbatore Suburb Project Details">
+            <div class="project-card">
+              <div class="project-card-img-wrap d-block">
                 <img src="assets/images/projects/project-1.jpg" alt="Residential Borewell Coimbatore" loading="lazy">
                 <div class="project-card-overlay"></div>
-                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
-                  <i class="bi bi-arrow-up-right"></i>
-                </span>
-              </a>
+              </div>
               <div class="project-card-content">
                 <span class="project-category">Residential Borewell</span>
-                <h3 class="project-title"><a href="projects/coimbatore-suburb.html" class="text-white text-decoration-none">Coimbatore Suburb</a></h3>
+                <h3 class="project-title text-white">Coimbatore Suburb</h3>
                 <div class="project-meta">
                   <div class="project-meta-item">
                     <i class="bi bi-geo-alt-fill"></i>
@@ -604,8 +636,8 @@
                   </div>
                 </div>
                 <div class="project-card-footer">
-                  <a href="projects/coimbatore-suburb.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
-                  <a href="projects/coimbatore-suburb.html" class="project-arrow-icon text-decoration-none" aria-label="View Coimbatore Suburb Project"><i class="bi bi-arrow-right"></i></a>
+                  <a href="contact.html" class="project-link-label text-decoration-none">Inquire Now &rarr;</a>
+                  <a href="contact.html" class="project-arrow-icon text-decoration-none" aria-label="Inquire about Coimbatore Suburb Project"><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -613,17 +645,14 @@
 
           <!-- Project 2 -->
           <div class="col-lg-3 col-md-6">
-            <div class="project-card" data-project-id="2" data-image="assets/images/projects/project-2.jpg" data-title="Pollachi Coconut Estate" data-category="Agricultural Farm" data-depth="Depth: 850 Ft" data-yield="7.5 HP Solar Pump" data-link="projects/pollachi-coconut-estate.html">
-              <a href="projects/pollachi-coconut-estate.html" class="project-card-img-wrap d-block" title="View Pollachi Coconut Estate Project Details">
+            <div class="project-card">
+              <div class="project-card-img-wrap d-block">
                 <img src="assets/images/projects/project-2.jpg" alt="Agricultural Borewell Pollachi" loading="lazy">
                 <div class="project-card-overlay"></div>
-                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
-                  <i class="bi bi-arrow-up-right"></i>
-                </span>
-              </a>
+              </div>
               <div class="project-card-content">
                 <span class="project-category">Agricultural Farm</span>
-                <h3 class="project-title"><a href="projects/pollachi-coconut-estate.html" class="text-white text-decoration-none">Pollachi Coconut Estate</a></h3>
+                <h3 class="project-title text-white">Pollachi Coconut Estate</h3>
                 <div class="project-meta">
                   <div class="project-meta-item">
                     <i class="bi bi-geo-alt-fill"></i>
@@ -635,8 +664,8 @@
                   </div>
                 </div>
                 <div class="project-card-footer">
-                  <a href="projects/pollachi-coconut-estate.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
-                  <a href="projects/pollachi-coconut-estate.html" class="project-arrow-icon text-decoration-none" aria-label="View Pollachi Coconut Estate Project"><i class="bi bi-arrow-right"></i></a>
+                  <a href="contact.html" class="project-link-label text-decoration-none">Inquire Now &rarr;</a>
+                  <a href="contact.html" class="project-arrow-icon text-decoration-none" aria-label="Inquire about Pollachi Coconut Estate Project"><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -644,17 +673,14 @@
 
           <!-- Project 3 -->
           <div class="col-lg-3 col-md-6">
-            <div class="project-card" data-project-id="3" data-image="assets/images/projects/project-3.jpg" data-title="Tiruppur Textile Park" data-category="Industrial Facility" data-depth="Depth: 1,100 Ft" data-yield="Multi-Stage Dual Pump" data-link="projects/tiruppur-textile-park.html">
-              <a href="projects/tiruppur-textile-park.html" class="project-card-img-wrap d-block" title="View Tiruppur Textile Park Project Details">
+            <div class="project-card">
+              <div class="project-card-img-wrap d-block">
                 <img src="assets/images/projects/project-3.jpg" alt="Industrial Water Solution Tiruppur" loading="lazy">
                 <div class="project-card-overlay"></div>
-                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
-                  <i class="bi bi-arrow-up-right"></i>
-                </span>
-              </a>
+              </div>
               <div class="project-card-content">
                 <span class="project-category">Industrial Facility</span>
-                <h3 class="project-title"><a href="projects/tiruppur-textile-park.html" class="text-white text-decoration-none">Tiruppur Textile Park</a></h3>
+                <h3 class="project-title text-white">Tiruppur Textile Park</h3>
                 <div class="project-meta">
                   <div class="project-meta-item">
                     <i class="bi bi-geo-alt-fill"></i>
@@ -666,8 +692,8 @@
                   </div>
                 </div>
                 <div class="project-card-footer">
-                  <a href="projects/tiruppur-textile-park.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
-                  <a href="projects/tiruppur-textile-park.html" class="project-arrow-icon text-decoration-none" aria-label="View Tiruppur Textile Park Project"><i class="bi bi-arrow-right"></i></a>
+                  <a href="contact.html" class="project-link-label text-decoration-none">Inquire Now &rarr;</a>
+                  <a href="contact.html" class="project-arrow-icon text-decoration-none" aria-label="Inquire about Tiruppur Textile Park Project"><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -675,17 +701,14 @@
 
           <!-- Project 4 -->
           <div class="col-lg-3 col-md-6">
-            <div class="project-card" data-project-id="4" data-image="assets/images/projects/project-4.jpg" data-title="Erode Commercial Center" data-category="Commercial Complex" data-depth="Depth: 620 Ft" data-yield="Automated Pressure Sensor" data-link="projects/erode-commercial-center.html">
-              <a href="projects/erode-commercial-center.html" class="project-card-img-wrap d-block" title="View Erode Commercial Center Project Details">
+            <div class="project-card">
+              <div class="project-card-img-wrap d-block">
                 <img src="assets/images/projects/project-4.jpg" alt="Commercial Borewell Erode" loading="lazy">
                 <div class="project-card-overlay"></div>
-                <span class="project-zoom-btn" title="View Project Details" aria-label="View Project Details">
-                  <i class="bi bi-arrow-up-right"></i>
-                </span>
-              </a>
+              </div>
               <div class="project-card-content">
                 <span class="project-category">Commercial Complex</span>
-                <h3 class="project-title"><a href="projects/erode-commercial-center.html" class="text-white text-decoration-none">Erode Commercial Center</a></h3>
+                <h3 class="project-title text-white">Erode Commercial Center</h3>
                 <div class="project-meta">
                   <div class="project-meta-item">
                     <i class="bi bi-geo-alt-fill"></i>
@@ -697,8 +720,8 @@
                   </div>
                 </div>
                 <div class="project-card-footer">
-                  <a href="projects/erode-commercial-center.html" class="project-link-label text-decoration-none">View Project &rarr;</a>
-                  <a href="projects/erode-commercial-center.html" class="project-arrow-icon text-decoration-none" aria-label="View Erode Commercial Center Project"><i class="bi bi-arrow-right"></i></a>
+                  <a href="contact.html" class="project-link-label text-decoration-none">Inquire Now &rarr;</a>
+                  <a href="contact.html" class="project-arrow-icon text-decoration-none" aria-label="Inquire about Erode Commercial Center Project"><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -857,7 +880,6 @@
 					<li><a href="index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
 					<li><a href="about.html"><i class="bi bi-chevron-right small"></i> About Us</a></li>
 					<li><a href="services.html"><i class="bi bi-chevron-right small"></i> Services</a></li>
-					<li><a href="projects.html"><i class="bi bi-chevron-right small"></i> Projects</a></li>
 					<li><a href="pricing.html"><i class="bi bi-chevron-right small"></i> Pricing</a></li>
 					<li><a href="service-area.html"><i class="bi bi-chevron-right small"></i> Service Areas</a></li>
 					<li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Insights Blog</a></li>

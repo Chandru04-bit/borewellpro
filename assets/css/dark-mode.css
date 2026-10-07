@@ -15,6 +15,7 @@
    1. CSS Custom Properties / Tokens in Dark Mode
 =================================================================== */
 [data-theme="dark"] {
+  color-scheme: dark;
   /* Surfaces & Backgrounds */
   --bp-bg: #090E17;
   --bp-bg-alt: #0D1522;
@@ -253,6 +254,13 @@
 [data-theme="dark"] .site-header {
   background-color: var(--bp-chrome-bg) !important;
   border-bottom: 1px solid var(--bp-chrome-border) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .site-header.is-scrolled {
+  background-color: var(--bp-chrome-bg) !important;
+  border-bottom: 1px solid var(--bp-chrome-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
 }
 
 [data-theme="dark"] .navbar-brand {
@@ -610,29 +618,46 @@
 /* ===================================================================
    8. Process Sections (Home 1 & Home 2 Niche)
 =================================================================== */
-/* Home 1 Process Step Circles */
-[data-theme="dark"] .process-step-circle {
+/* Home 1 Process Step Cards */
+[data-theme="dark"] .process-step-item {
+  background-color: transparent;
+}
+
+@media (max-width: 575.98px) {
+  [data-theme="dark"] .process-step-item {
+    background-color: var(--bp-card-bg);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+[data-theme="dark"] .process-step-media {
+  border-color: rgba(255, 255, 255, 0.1);
   background-color: #131E2E;
-  color: #F8FAFC;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .process-step-item:hover .process-step-media {
   border-color: var(--bp-blue-500);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
 }
 
-[data-theme="dark"] .process-step-item .step-num {
-  color: var(--bp-blue-400) !important;
+[data-theme="dark"] .process-step-number {
+  background: var(--bp-blue-600);
+  color: #FFFFFF;
 }
 
-[data-theme="dark"] .process-step-item:hover .process-step-circle {
-  background-color: var(--bp-blue-600) !important;
-}
-
-[data-theme="dark"] .process-step-item:hover .step-num,
-[data-theme="dark"] .process-step-item:hover i {
-  color: #FFFFFF !important;
+[data-theme="dark"] .process-step-item h4,
+[data-theme="dark"] .process-step-item .h6 {
+  color: #F8FAFC;
 }
 
 [data-theme="dark"] .process-step-item:hover h4,
 [data-theme="dark"] .process-step-item:hover .h6 {
-  color: #FFFFFF !important;
+  color: var(--bp-blue-400) !important;
+}
+
+[data-theme="dark"] .process-step-item p {
+  color: #94A3B8;
 }
 
 /* Home 2 Niche Process Section */
@@ -657,14 +682,14 @@
 }
 
 [data-theme="dark"] .process-circle-glow {
-  background: radial-gradient(circle at 50% 40%, #0F1D33 0%, #080D17 100%) !important;
-  border: 2px solid #0EA5E9 !important;
+  background: #0F1D33 !important;
+  border: 3px solid #0EA5E9 !important;
   box-shadow: 0 0 20px rgba(14, 165, 233, 0.25), 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-[data-theme="dark"] .process-circle-glow .process-icon,
-[data-theme="dark"] .process-niche-item:hover .process-circle-glow .process-icon {
-  color: #FFFFFF !important;
+[data-theme="dark"] .process-niche-item:hover .process-circle-glow {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 0 32px rgba(14, 165, 233, 0.6), 0 6px 20px rgba(0, 0, 0, 0.6) !important;
 }
 
 [data-theme="dark"] .process-item-title {
@@ -714,6 +739,35 @@
 /* ===================================================================
    10. Forms, Inputs & Controls
 =================================================================== */
+/* Date & Time Input Calendar Indicators in Dark Mode */
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"],
+[data-theme="dark"] input[type="datetime-local"],
+[data-theme="dark"] input[type="month"],
+[data-theme="dark"] input[type="week"] {
+  color-scheme: dark !important;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="month"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="week"]::-webkit-calendar-picker-indicator {
+  filter: none !important;
+  opacity: 0.9 !important;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="month"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="week"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1 !important;
+  filter: brightness(1.2) !important;
+}
+
 [data-theme="dark"] .form-label,
 [data-theme="dark"] .form-check-label {
   color: #F8FAFC !important;
