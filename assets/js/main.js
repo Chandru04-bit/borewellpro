@@ -48,16 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const RTL_KEY = 'borewellpro_rtl';
   const htmlEl = document.documentElement;
 
-  function setRTL(isRTL) {
-    if (isRTL) {
-      htmlEl.setAttribute('dir', 'rtl');
-      htmlEl.setAttribute('lang', 'ar');
-      localStorage.setItem(RTL_KEY, 'true');
-    } else {
-      htmlEl.setAttribute('dir', 'ltr');
-      htmlEl.setAttribute('lang', 'en');
-      localStorage.setItem(RTL_KEY, 'false');
+  function readRTLPreference() {
+    try {
+      return localStorage.getItem(RTL_KEY) === 'true';
+    } catch (error) {
+      return false;
     }
+  }
+
+  function saveRTLPreference(isRTL) {
+    try {
+      localStorage.setItem(RTL_KEY, String(isRTL));
+    } catch (error) {
+      // The current page still switches even when storage is unavailable.
+    }
+  }
+
+  function setRTL(isRTL) {
+    htmlEl.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    saveRTLPreference(isRTL);
     updateRTLButtons(isRTL);
   }
 
@@ -69,10 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const savedRTL = localStorage.getItem(RTL_KEY) === 'true';
+  const savedRTL = readRTLPreference();
   if (savedRTL) {
-    setRTL(true);
+    htmlEl.setAttribute('dir', 'rtl');
   }
+  updateRTLButtons(savedRTL);
 
   document.querySelectorAll('.rtl-toggle-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
