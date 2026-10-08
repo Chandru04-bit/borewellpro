@@ -192,8 +192,13 @@
   }
 
   .section-py {
-    padding-top: 2.75rem;
-    padding-bottom: 2.75rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-py-sm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .section-header {
@@ -352,8 +357,22 @@
     padding-top: 70px !important;
   }
 
+  .section-py {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .section-py-sm {
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
   .hero-home-1 {
-    padding: 5rem 0 4rem;
+    padding: 4.5rem 0 3.5rem;
   }
 
   .hero-visual-frame img {

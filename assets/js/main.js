@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setRTL(isRTL) {
     htmlEl.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    htmlEl.classList.toggle('is-rtl', isRTL);
     saveRTLPreference(isRTL);
     updateRTLButtons(isRTL);
   }
@@ -75,12 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = isRTL ? 'LTR' : 'RTL';
       btn.setAttribute('title', isRTL ? 'Switch to Left-to-Right (LTR)' : 'Switch to Right-to-Left (RTL)');
       btn.setAttribute('aria-label', isRTL ? 'Switch to Left-to-Right' : 'Switch to Right-to-Left');
+      btn.classList.toggle('active', isRTL);
     });
   }
 
   const savedRTL = readRTLPreference();
   if (savedRTL) {
     htmlEl.setAttribute('dir', 'rtl');
+    htmlEl.classList.add('is-rtl');
+  } else {
+    htmlEl.setAttribute('dir', 'ltr');
+    htmlEl.classList.remove('is-rtl');
   }
   updateRTLButtons(savedRTL);
 
