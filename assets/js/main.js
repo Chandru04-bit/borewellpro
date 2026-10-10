@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     htmlEl.classList.toggle('is-rtl', isRTL);
     saveRTLPreference(isRTL);
     updateRTLButtons(isRTL);
+    window.dispatchEvent(new CustomEvent('rtlchange', { detail: { isRTL } }));
   }
 
   function updateRTLButtons(isRTL) {
@@ -178,42 +179,67 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sliderTrack && slides.length > 0) {
     let currentIndex = 0;
     const totalSlides = slides.length;
+    let slideInterval = null;
 
     function goToSlide(index) {
       if (index < 0) index = totalSlides - 1;
       if (index >= totalSlides) index = 0;
       currentIndex = index;
 
-      const isRTL = htmlEl.getAttribute('dir') === 'rtl';
-      const offsetMultiplier = isRTL ? 100 : -100;
-      sliderTrack.style.transform = `translateX(${currentIndex * offsetMultiplier}%)`;
+      sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
 
       indicators.forEach((dot, i) => {
         dot.classList.toggle('active', i === currentIndex);
       });
     }
 
+    function resetAutoRotate() {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+      }
+      slideInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
+    }
+
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        resetAutoRotate();
+      });
     }
 
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        resetAutoRotate();
+      });
     }
 
     indicators.forEach((dot, i) => {
-      dot.addEventListener('click', () => goToSlide(i));
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+        resetAutoRotate();
+      });
     });
 
     // Auto rotate every 6 seconds
-    let slideInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
+    slideInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
     const sliderContainer = document.querySelector('.testimonial-slider-wrapper');
     if (sliderContainer) {
-      sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      sliderContainer.addEventListener('mouseenter', () => {
+        if (slideInterval) clearInterval(slideInterval);
+      });
       sliderContainer.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
+        resetAutoRotate();
       });
     }
+
+    // Re-calculate position when RTL mode changes
+    window.addEventListener('rtlchange', () => {
+      goToSlide(currentIndex);
+    });
+
+    // Initialize slide state
+    goToSlide(0);
   }
 
   // 5. Back to Top Button

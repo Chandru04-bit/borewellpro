@@ -609,11 +609,6 @@
     white-space: nowrap;
   }
 
-  .site-header .login-dummy-btn {
-    min-height: 34px;
-    padding: 0 10px;
-    font-size: 0.72rem;
-  }
 
   .site-header .d-flex.align-items-center.order-lg-3 {
     gap: 0.35rem !important;

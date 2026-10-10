@@ -704,11 +704,6 @@ img {
   user-select: none;
 }
 
-.site-header .login-dummy-btn {
-  min-height: 40px;
-  padding: 0 14px;
-  white-space: nowrap;
-}
 
 .theme-toggle-btn:hover, .rtl-toggle-btn:hover {
   background-color: var(--bp-blue-100);
@@ -2003,6 +1998,66 @@ section.bg-navy {
   color: var(--bp-text-muted);
 }
 
+/* Testimonial Slider Controls & Indicators */
+.slider-control-prev,
+.slider-control-next {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.slider-control-prev i,
+.slider-control-next i {
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+.slider-dots-container {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.slider-dot-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: #CBD5E1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-block;
+}
+
+.slider-dot-indicator:hover {
+  background-color: var(--bp-blue-400);
+}
+
+.slider-dot-indicator.active {
+  background-color: var(--bp-blue-600);
+  width: 24px;
+  border-radius: 6px;
+}
+
+[data-theme="dark"] .slider-dot-indicator {
+  background-color: var(--bp-navy-600);
+}
+
+[data-theme="dark"] .slider-dot-indicator:hover {
+  background-color: var(--bp-blue-400);
+}
+
+[data-theme="dark"] .slider-dot-indicator.active {
+  background-color: var(--bp-blue-500);
+}
+
 /* ================= Pricing Cards ================= */
 .pricing-card {
   background-color: var(--bp-card-bg);
@@ -2904,6 +2959,20 @@ input[type="week"]::-webkit-calendar-picker-indicator:hover {
   display: inline-block;
   margin-right: 0.35rem !important;
   margin-left: 0 !important;
+}
+
+/* Slider Controls RTL Arrow & Centering */
+[dir="rtl"] .slider-control-prev i,
+[dir="rtl"] .slider-control-next i,
+[dir="rtl"] .btn.slider-control-prev i,
+[dir="rtl"] .btn.slider-control-next i,
+[dir="rtl"] .slider-control-prev .bi-arrow-left,
+[dir="rtl"] .slider-control-next .bi-arrow-right {
+  transform: none !important;
+  margin: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  display: inline-block;
 }
 
 /* Service Cards & Pricing Cards */
